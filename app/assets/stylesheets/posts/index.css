@@ -1,0 +1,12 @@
+.main {
+  background-color: rgb(252, 252, 252);
+  display: flex;
+}
+
+.post-contents {
+  width: 50vw;
+  height: 100vh;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 40px;
+}

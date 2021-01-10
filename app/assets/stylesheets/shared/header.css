@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  height: 8vh;
+  padding: 1vh 15vw;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px lightgray;
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roots-icon {
+  width: 10vw;
+  margin-right: 10vw;
+  margin-top: -7vh;
+}
+
+.search-form {
+  width: 65vw;
+  margin: 0 auto;
+  margin-bottom: 8vh;
+  padding-left: 8vw;
+}
+
+.search-form>.input-box {
+  width: 40%;
+  height: 4vh;
+  text-align: center;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+  width: 10vw;
+  margin-bottom: 7vh;
+}
