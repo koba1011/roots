@@ -2,6 +2,19 @@
   <%= render "shared/header" %>
   <div class="main">
     <div class="post-contents">
+      <% @posts.each do |post| %>
+        <div class="post-content">
+          <div class="post-video-content">
+            <div class="post-user-name">
+              <%= post.user.user_name %>
+            </div>
+            <%= link_to (video_tag rails_blob_path(post.video), class: "post-video"), "#" %>
+          </div>
+          <div class="post-info">
+            <%= link_to post.caption, "#", class: "caption-link" %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
   <%= render "shared/footer" %>
