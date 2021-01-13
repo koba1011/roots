@@ -1,0 +1,45 @@
+<%= render "shared/header" %>
+
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">新しく動画を投稿する</h2>
+    <%= form_with model: @post, url: posts_path, local: true do |f| %>
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        動画ファイルを選択
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :video, id:"item-image" %>
+      </div>
+    </div>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        詳細
+      </div>
+      <%= f.text_area :caption, class:"items-text", id:"item-name", placeholder:"タイトル", maxlength:"40" %>
+      <div class="items-explain">
+        <%= f.text_area :describe, class:"items-text", id:"item-info", placeholder:"説明" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+      <%= f.text_area :place, class:"items-text", id:"item-info", placeholder:"場所" %>
+    </div>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+    <ul class="menu">
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">Roots利用規約</a></li>
+      <li><a href="#">特定商取引に関する表記</a></li>
+    </ul>
+    <p class="inc">
+      ©︎Roots
+    </p>
+  </footer>
+</div>
