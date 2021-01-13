@@ -8,10 +8,10 @@
             <div class="post-user-name">
               <%= post.user.user_name %>
             </div>
-            <%= link_to (video_tag rails_blob_path(post.video), class: "post-video"), "#" %>
+            <%= link_to (video_tag rails_blob_path(post.video), class: "post-video"), post_path(post.id) %>
           </div>
           <div class="post-info">
-            <%= link_to post.caption, "#", class: "caption-link" %>
+            <%= link_to post.caption, post_path(post.id), class: "caption-link" %>
           </div>
         </div>
       <% end %>
