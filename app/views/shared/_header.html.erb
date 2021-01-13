@@ -1,11 +1,11 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='top-page-header2'>
-  <div class='search-bar-contents2'>
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
     <%= link_to image_tag("Roots.png", class: "roots-icon2"), "/" %>
-    <form class="search-form2" action="#">
-      <input class='input-box2' placeholder='検索'>
+    <form class="search-form" action="#">
+      <input class='input-box' placeholder='検索'>
     </form>
-    <div class='nav2'>
+    <div class='nav'>
       <ul class='lists-right'>
         <li><%= link_to current_user.user_name, "#", class: "user-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
