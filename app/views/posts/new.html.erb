@@ -1,0 +1,45 @@
+<%= render "shared/header" %>
+
+<div class="posts-post-contents">
+  <div class="posts-post-main">
+    <h2 class="posts-post-title">新しく動画を投稿する</h2>
+    <%= form_with model: @post, url: posts_path, local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        動画ファイルを選択
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :video, id:"posts-image" %>
+      </div>
+    </div>
+    <div class="new-posts">
+      <div class="weight-bold-text">
+        詳細
+      </div>
+      <%= f.text_area :caption, class:"posts-text", id:"post-name", placeholder:"タイトル", maxlength:"40" %>
+      <div class="items-explain">
+        <%= f.text_area :describe, class:"posts-text", id:"post-info", placeholder:"説明" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+      <%= f.text_area :place, class:"posts-text", id:"post-info", placeholder:"場所" %>
+    </div>
+    <div class="post-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="posts-post-footer">
+    <ul class="menu">
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">Roots利用規約</a></li>
+      <li><a href="#">特定商取引に関する表記</a></li>
+    </ul>
+    <p class="inc">
+      ©︎Roots
+    </p>
+  </footer>
+</div>
