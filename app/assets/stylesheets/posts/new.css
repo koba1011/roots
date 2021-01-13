@@ -1,7 +1,7 @@
 /* border-bottom: 1px solid #eee; */
 
 
-.items-sell-contents {
+.posts-post-contents {
   background-color: #fff;
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
@@ -11,7 +11,7 @@
   min-width: 500px;
 }
 
-.items-sell-main {
+.posts-post-main {
   background-color: #FFF;
   width: 70vw;
   min-width: 450px;
@@ -19,7 +19,7 @@
   margin-top: 10vh;
 }
 
-.items-sell-title {
+.posts-post-title {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -47,11 +47,11 @@
   margin-bottom: 15px;
 }
 
-.new-items {
+.new-posts {
   padding: 2vh 0;
 }
 
-.items-text {
+.posts-text {
   width: 100%;
   padding: 16px 16px 8px;
   border-radius: 4px;
@@ -62,12 +62,12 @@
 }
 
 
-.sell-btn-contents {
+.post-btn-contents {
   width: 100%;
   text-align: center;
 }
 
-.sell-btn {
+.post-btn {
   background: rgb(56, 159, 255);
   border: 1px solid rgb(56, 159, 255);
   color: #fff;
@@ -79,7 +79,7 @@
 }
 
 
-.items-sell-footer {
+.posts-post-footer {
   border-top: 1px solid #f3f3f3e8;
   background-color: #f3f3f36e;
   width: 100%;
@@ -90,7 +90,7 @@
 }
 
 
-.items-sell-footer>.menu {
+.posts-post-footer>.menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
