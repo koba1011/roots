@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   with_options presence: true do
     validates :name
-    validates :user_name
+    validates :user_name, format: { with: /\A[a-zA-Z0-9]+\z/, message: "Please type using half-width characters"}
   end
 end

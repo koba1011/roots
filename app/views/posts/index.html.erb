@@ -1,6 +1,12 @@
-<%= render "shared/header" %>
-<div class="main">
-  <div class="post-contents">
+<% if user_signed_in? %>
+  <%= render "shared/header" %>
+  <div class="main">
+    <div class="post-contents">
+    </div>
   </div>
-</div>
-<%= render "shared/footer" %>
+  <%= render "shared/footer" %>
+<% else %>
+  <%= render "shared/second-index" %>
+<% end %>
+
+
