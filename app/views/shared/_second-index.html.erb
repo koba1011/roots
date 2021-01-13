@@ -1,0 +1,13 @@
+<div class="second-main">
+  <div class="second-contents">
+    <h2 class="second-text">見てみようあの景色</h2>
+    <%= image_tag "neko.jpg", class: "neko-image"%>
+  </div>
+  <div class="second-wrap">
+    <div class="second-group">
+      <%= image_tag "Roots.png", class: "second-roots"%>
+      <%= button_to "アカウント作成", new_user_registration_path, method: :get, class: "second-sign-up-btn" %>
+      <%= button_to "ログイン", new_user_session_path, class: "second-login-btn" %>
+    </div>
+  </div>
+</div>
