@@ -1,0 +1,45 @@
+.post-show-contents {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 150px auto 50px;
+}
+
+.post-show-content {
+  background-color: #fff;
+  margin-bottom: 10vh;
+  padding-bottom: 2vh;
+  width: 70vw;
+}
+
+.post-user-name {
+  margin: 10px;
+}
+
+.post-video-show {
+  width: 100%;
+}
+
+.post-show-caption {
+  font-size: 22px;
+  margin-top: 2vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid rgba(233, 233, 233, 0.884);
+  font-weight: bold;
+}
+
+.post-show-describe {
+  border-bottom: 1px solid rgba(233, 233, 233, 0.884);
+  margin-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.post-show-user {
+  margin-bottom: 3vh;
+}
+
+.post-show-place {
+  margin: 2vh 0 2vh;
+}
+
+

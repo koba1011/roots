@@ -59,9 +59,7 @@
   font-weight: bold;
 }
 
-
-.header-post {
-  text-decoration: none;
-  color: #333333;
-  margin-right: 5vw;
+.post-new-icon {
+  width: 3vw;
+  margin: -10px 40px 0 50px;
 }

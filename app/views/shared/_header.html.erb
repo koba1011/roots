@@ -6,7 +6,7 @@
     </form>
     <div class='nav'>
       <ul class='lists-right'>
-        <li><%= link_to '投稿する', new_post_path, class: "header-post" %></li>
+        <li><%= link_to image_tag("post-new.png", class: "post-new-icon"), new_post_path %></li>
         <li><%= link_to current_user.user_name, "#", class: "user-nickname" %></li>
       </ul>
     </div>
