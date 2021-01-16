@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+<div class="post-show-contents">
+  <div class="post-show-content">
+    <div class="post-video-content">
+      <video autoplay="" class="post-video-show" src="<%= rails_blob_path(@post.video) %>"type="video/mp4" controls></video>
+    </div>
+    <div class="post-show-caption">
+      <%= @post.caption %>
+    </div>
+    <div class="post-show-describe">
+      <%= @post.describe %>
+    </div>
+    <div class="post-show-place">
+      <%= @post.place %>
+    </div>
+    <%= render 'shared/map', collection: @post %>
+  </div>
+</div>
