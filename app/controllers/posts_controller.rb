@@ -11,16 +11,20 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.valid?
-      @post.save
-      redirect_to root_path
-    else
-      render :new
+    url = params[:post][:youtube_url]
+    url = url.last(11)
+    @post.youtube_url = url
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to root_path }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
     end
   end
- 
- def 表示させるview
- end
 
   def show
     @post = Post.find(params[:id])

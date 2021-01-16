@@ -12,6 +12,10 @@
   width: 70vw;
 }
 
+.post-caption {
+  font-weight: bold;
+}
+
 .post-user-name {
   margin: 10px;
 }
@@ -25,13 +29,12 @@
   margin-top: 2vh;
   padding-bottom: 2vh;
   border-bottom: 1px solid rgba(233, 233, 233, 0.884);
-  font-weight: bold;
 }
 
 .post-show-describe {
   border-bottom: 1px solid rgba(233, 233, 233, 0.884);
   margin-top: 2vh;
-  padding-bottom: 2vh;
+  padding-bottom: 8vh;
 }
 
 .post-show-user {
@@ -42,4 +45,15 @@
   margin: 2vh 0 2vh;
 }
 
+.post-time {
+  font-size: 14px;
+  margin-left: 20px;
+}
 
+.post-show-comments {
+  border-top: 1px solid rgba(233, 233, 233, 0.884);
+}
+
+.post-show-comments {
+  padding-top: 2vh;
+}
