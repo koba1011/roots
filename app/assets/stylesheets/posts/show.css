@@ -93,9 +93,9 @@ a {
 
 .post-delete-btn {
   width: 100px;
-  background: rgb(56, 159, 255);
+  background: #fff;
   border: 1px solid rgb(56, 159, 255);
-  color: #fff;
+  color: rgb(56, 159, 255);
   line-height: 35px;
   font-size: 14px;
   cursor: pointer;
