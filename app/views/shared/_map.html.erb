@@ -3,7 +3,7 @@
 
     let test ={lat: <%= @post.latitude %>, lng: <%= @post.longitude %>};
     let map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 10, 
+              zoom: 12, 
               center: test
               });
     let transitLayer = new google.maps.TransitLayer();

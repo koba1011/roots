@@ -12,13 +12,17 @@
       <span class="post-caption"><%= @post.caption %></span>
       <span class="post-time"><%= time_ago_in_words(@post.created_at)+"前に投稿" %></span> 
     </div>
-    <div class="post-show-describe">
-      <%= @post.describe %>
-    </div>
-    <div class="post-show-url">
-      <h2 class="post-show-link-title">オススメ</h2>
-      <%= Rinku.auto_link(@post.share_url, :all, 'target="_blank"').html_safe %>
-    </div>
+    <% if @post.describe.present? %>
+      <div class="post-show-describe">
+        <p><%=safe_join(@post.describe.split("\n"),tag(:br)) %></p>
+      </div>
+    <% end %>
+    <% if @post.share_url.present? %>
+      <div class="post-show-url">
+        <h2 class="post-show-link-title">オススメ</h2>
+        <%= Rinku.auto_link(@post.share_url, :all, 'target="_blank"').html_safe %>
+      </div>
+    <% end %>
     <div class="post-show-place">
       <%= @post.place %>
     </div>
