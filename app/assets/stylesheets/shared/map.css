@@ -2,3 +2,8 @@
   height: 350px;
   width: 100%;
 }
+
+.map {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(233, 233, 233, 0.884);
+}

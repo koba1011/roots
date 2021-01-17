@@ -8,12 +8,17 @@
             <div class="post-user-name">
               <%= post.user.user_name %>
             </div>
-            <% if post.present? %>
+            <% if post.video.present? %>
               <%= link_to (video_tag rails_blob_path(post.video), class: "post-video"), post_path(post.id) %>
+            <% elsif post.youtube_url.present? %>
+              <%= link_to  post_path(post.id) do %>
+                <img class="youtube-image" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
+              <% end %>
             <% end %>
           </div>
           <div class="post-info">
             <%= link_to post.caption, post_path(post.id), class: "caption-link" %>
+            <span class="post-index-time"><%= time_ago_in_words(post.created_at)+"前" %></span>
           </div>
         </div>
       <% end %>

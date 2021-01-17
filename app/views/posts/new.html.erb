@@ -2,7 +2,7 @@
 
 <div class="posts-post-contents">
   <div class="posts-post-main">
-    <h2 class="posts-post-title">新しく動画を投稿する</h2>
+    <h2 class="posts-post-title">動画を投稿するかオススメのYouTube動画を紹介しよう！</h2>
     <%= form_with model: @post, url: posts_path, local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
     <div class="img-upload">
@@ -17,6 +17,8 @@
       </div>
     </div>
     <div class="new-posts">
+      <h2 class="posts-post-text">Youtubeの動画を共有する場合は、こちらにURLを入力してください</h2>
+      <%= f.text_area :youtube_url, class:"youtube-form", id:"post-name", placeholder:"YouTubeURL" %>
       <div class="weight-bold-text">
         詳細
       </div>
@@ -25,6 +27,7 @@
         <%= f.text_area :describe, class:"posts-text", id:"post-info", placeholder:"説明" ,rows:"7" ,maxlength:"1000" %>
       </div>
       <%= f.text_area :place, class:"posts-text", id:"gmap", placeholder:"場所" %>
+      <%= f.text_area :share_url, class:"posts-url", id:"post-url", placeholder:"オススメのお店や観光スポットをURLやテキストを付けて共有しよう!" %>
     </div>
     <div class="post-btn-contents">
       <%= f.submit "投稿する" ,class:"post-btn" %>

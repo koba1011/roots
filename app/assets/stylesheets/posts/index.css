@@ -38,3 +38,12 @@
   text-decoration: none;
   color: black;
 }
+
+.youtube-image {
+  width: 100%;
+}
+
+.post-index-time {
+  font-size: 12px;
+  margin-left: 10px;
+}
