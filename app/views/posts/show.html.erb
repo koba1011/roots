@@ -11,6 +11,9 @@
     <div class="post-show-caption">
       <span class="post-caption"><%= @post.caption %></span>
       <span class="post-time"><%= time_ago_in_words(@post.created_at)+"前に投稿" %></span> 
+      <% if @post.user_id == current_user.id %>
+        <%= button_to "投稿の編集", edit_post_path(@post.id), method: :get, class: "post-edit-btn" %>
+      <% end %>
     </div>
     <% if @post.describe.present? %>
       <div class="post-show-describe">

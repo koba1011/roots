@@ -37,8 +37,11 @@ class PostsController < ApplicationController
   end
 
   def update
+    url = params[:post][:youtube_url]
+    url = url.last(11)
+    @post.youtube_url = url
     if @post.update(post_params)
-      redirect_to :show
+      redirect_to post_path method: :get
     else
       render :edit
     end
