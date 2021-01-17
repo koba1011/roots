@@ -12,7 +12,14 @@
       <span class="post-caption"><%= @post.caption %></span>
       <span class="post-time"><%= time_ago_in_words(@post.created_at)+"前に投稿" %></span> 
       <% if @post.user_id == current_user.id %>
-        <%= button_to "投稿の編集", edit_post_path(@post.id), method: :get, class: "post-edit-btn" %>
+        <div class="post-show-btn-list">
+          <div class="post-show-btn">
+            <%= button_to "投稿の編集", edit_post_path(@post.id), method: :get, class: "post-edit-btn" %>
+          </div>
+          <div class="post-show-btn">
+            <%= button_to "投稿の削除", post_path(@post.id), method: :delete, class: "post-delete-btn" %>
+          </div>
+        </div>
       <% end %>
     </div>
     <% if @post.describe.present? %>

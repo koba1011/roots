@@ -52,7 +52,7 @@ class PostsController < ApplicationController
     if post.user_id != current_user.id
       redirect_to root_path
     end
-    item.destroy
+    post.destroy
     redirect_to root_path
   end
 
