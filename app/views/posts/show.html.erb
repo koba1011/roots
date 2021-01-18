@@ -3,7 +3,7 @@
   <div class="post-show-content">
     <div class="post-video-content">
       <%if @post.video.present? %>
-       <video autoplay="" class="post-video-show" src="<%= rails_blob_path(@post.video) %>"type="video/mp4" controls></video>
+       <video class="post-video-show" src="<%= rails_blob_path(@post.video) %>"type="video/mp4" controls></video>
       <% elsif @post.youtube_url.present? %>
         <iframe class="post-video-show" height="500" src="https://www.youtube.com/embed/<%= @post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <% end %>
