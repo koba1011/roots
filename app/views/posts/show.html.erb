@@ -39,6 +39,15 @@
     <%= render 'shared/map', collection: @post %>
     <div class="post-show-comments">
       <h2 class="comments-text">コメント</h2>
+      <%= form_with(model: [@post, @comment], local: true) do |f| %>
+        <%= f.text_area :text, class: "comment-text" %>
+        <%= f.submit 'コメント', class: "comment-submit"%>
+      <% end %>
+      <div id='comments'>
+        <% @comments.reverse_each do |comment| %>
+          <p><%= comment.text %></p>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
