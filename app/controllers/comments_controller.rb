@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
+    @post = Post.find(params[:post_id])
     if @comment.save
-      ActionCable.server.broadcast 'comment_channel', content: @comment
+      ActionCable.server.broadcast 'comment_channel', content: @comment, username: @comment.user.user_name, id: @post.id
     end
   end
 

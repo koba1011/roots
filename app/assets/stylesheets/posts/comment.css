@@ -1,0 +1,43 @@
+.comment-text {
+  width: 100%;
+  height: 5vh;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  margin-top: 5vh;
+  outline: none;
+  padding-top: 10px;
+}
+
+.comment-btn {
+  text-align: right;
+}
+
+.comment-submit {
+  background: rgb(56, 159, 255);
+  border: 1px solid rgb(56, 159, 255);
+  color: #fff;
+  width: 100px;
+  font-size: 14px;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.comment-top {
+  margin-top: 5vh;
+}
+
+.comment-user-name {
+  font-size: 16px;
+}
+
+.comment-time {
+  font-size: 14px;
+  margin-left: 5px;
+  color: rgb(163, 163, 163);
+}
+
+.comment-bottom {
+  margin: 2vh 0 5vh;
+}
