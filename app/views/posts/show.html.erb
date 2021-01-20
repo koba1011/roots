@@ -42,7 +42,7 @@
       <%= form_with(model: [@post, @comment], local: true) do |f| %>
         <%= f.text_area :text, placeholder:"コメントを入力...", class: "comment-text" %>
         <div class="comment-btn">
-          <%= f.submit 'コメント', class: "comment-submit"%>
+          <%= f.submit 'コメント', class: "btn btn-primary", id: 'message-button' %>
         </div>
       <% end %>
       <% if @post.comments.present? %>
