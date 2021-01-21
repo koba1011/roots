@@ -14,6 +14,7 @@
 
 .post-caption {
   font-weight: bold;
+  font-size: 22px;
 }
 
 .post-user-name {
@@ -25,7 +26,6 @@
 }
 
 .post-show-caption {
-  font-size: 22px;
   margin-top: 2vh;
   padding-bottom: 2vh;
   border-bottom: 1px solid rgba(233, 233, 233, 0.884);
@@ -41,11 +41,6 @@
   border-bottom: 1px solid rgba(233, 233, 233, 0.884);
   margin-top: 2vh;
   padding-bottom: 4vh;
-}
-
-a {
-  text-decoration: none;
-  color: rgba(51, 116, 255, 0.897);
 }
 
 .post-show-link-title {
@@ -79,6 +74,7 @@ a {
 
 .post-show-btn {
   display: inline-block;
+  margin-right: 10px;
 }
 
 .post-edit-btn {

@@ -1,0 +1,43 @@
+<% comments.reverse_each do |comment| %>
+  <% unless comment.id.nil? %>
+    <div class='comment-display'>
+      <div class='comment-top'>
+        <span class="comment-user-name"><%= comment.user.user_name %></span>
+        <span class="comment-time"><time datetime="<%= comment.created_at %>"><%= time_ago_in_words(comment.created_at)+"前" %></time></span>
+        <% if comment.user == current_user %>
+          <div class="btn-group dropleft float-right">
+            <button type="button" class="btn btn-link dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </button>
+            <div class="dropdown-menu ">
+              <button type="button" class="dropdown-item" data-toggle="modal" data-target="#exampleModal">
+                削除する
+              </button>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">コメントの削除</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    コメントを完全に削除しますか？
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                    <button type="button" class="btn btn-primary" ><%= link_to '削除', post_comment_path(comment.post_id, comment.id), class: "delete-btn", method: :delete, remote: true %></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class='comment-bottom'>
+        <p><%= comment.text %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>

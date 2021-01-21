@@ -1,0 +1,10 @@
+$('#comments_area').html("<%= j(render 'index', { comments: @comment.post.comments }) %>")
+$("textarea").val('')
+$("#oppDateModal").modal("hide");
+$("#oppDateModal").hide();
+$(".modal-backdrop").hide();
+$("body").removeClass("modal-open");
+
+
+
+
