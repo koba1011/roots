@@ -41,3 +41,8 @@
 .comment-bottom {
   margin: 2vh 0 5vh;
 }
+
+.delete-btn {
+  color: #fff;
+  text-decoration: none;
+}

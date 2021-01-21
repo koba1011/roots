@@ -38,30 +38,19 @@
     </div>
     <%= render 'shared/map', collection: @post %>
     <div class="post-show-comments">
-      <h2 class="comments-text"><%= @post.comments.count %> 件のコメント</h2>
-      <%= form_with(model: [@post, @comment], local: true) do |f| %>
-        <%= f.text_area :text, placeholder:"コメントを入力...", class: "comment-text" %>
-        <div class="comment-btn">
-          <%= f.submit 'コメント', class: "btn btn-primary", id: 'message-button' %>
+      <div class="comments-text"><%= @comments.count %>件のコメント</div>
+      <% if user_signed_in? %>
+        <div class="comment-create">
+          <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
         </div>
       <% end %>
-      <% if @post.comments.present? %>
-        <div class="comments-list">
-          <div id='comments'>
-          </div>
-          <% @comments.reverse_each do |comment| %>
-            <div class='comment-display'>
-              <div class='comment-top'>
-                <span class="comment-user-name"><%= comment.user.user_name %></span>
-                <span class="comment-time"><time datetime="<%= comment.created_at %>"><%= time_ago_in_words(comment.created_at)+"前" %></time></span>
-              </div>
-              <div class='comment-bottom'>
-                <p><%= comment.text %></p>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+      <div class="comments-list">
+        <ul>
+          <li id="comments_area">
+            <%= render partial: 'comments/index', locals: { comments: @comments } %>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

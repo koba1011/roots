@@ -1,12 +1,18 @@
 class CommentsController < ApplicationController
   def create
-    @comment = Comment.new(comment_params)
     @post = Post.find(params[:post_id])
-    if @comment.save
-      ActionCable.server.broadcast 'comment_channel', content: @comment, username: @comment.user.user_name, id: @post.id
-    end
+    #投稿に紐づいたコメントを作成
+    @comment = @post.comments.build(comment_params)
+    @comment.user_id = current_user.id
+    @comment.save
+    render :index
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    render :index
+  end
   private
 
   def comment_params
