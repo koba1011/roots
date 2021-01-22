@@ -12,8 +12,8 @@
       <span class="post-caption"><%= @post.caption %></span>
       <span class="post-time"><%= time_ago_in_words(@post.created_at)+"前に投稿" %></span> 
       <% if @post.user_id == current_user.id %>
-          <button type="button" class= "post-delete-btn float-right" data-toggle="modal" data-target="#exampleModal1">
-            削除する
+          <button type="button" class= "btn btn-secondary float-right btn-sm" data-toggle="modal" data-target="#exampleModal1">
+            投稿の削除
           </button>
           <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -29,13 +29,13 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-                  <button type="button" class="btn btn-primary" ><%= link_to "投稿の削除", post_path(@post.id), method: :delete, class: "delete-btn" %></button>
+                  <%= link_to "投稿の削除", post_path(@post.id), method: :delete, class: "btn btn-primary" %>
                 </div>
               </div>
             </div>
           </div>
           <div class="post-show-btn float-right">
-            <%= button_to "投稿の編集", edit_post_path(@post.id), method: :get, class: "post-edit-btn" %>
+            <%= button_to "投稿の編集", edit_post_path(@post.id), method: :get, class: "btn btn-secondary btn-sm" %>
           </div>
       <% end %>
     </div>
@@ -50,10 +50,12 @@
         <%= Rinku.auto_link(@post.share_url, :all, 'target="_blank"').html_safe %>
       </div>
     <% end %>
-    <div class="post-show-place">
-      <%= @post.place %>
-    </div>
-    <%= render 'shared/map', collection: @post %>
+    <% if @post.place.present?%>
+      <div class="post-show-place">
+        <%= @post.place %>
+      </div>
+      <%= render 'shared/map', collection: @post %>
+    <% end %>
     <div class="post-show-comments">
       <div class="comments-text"><%= @comments.count %>件のコメント</div>
       <% if user_signed_in? %>

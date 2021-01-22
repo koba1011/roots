@@ -1,6 +1,6 @@
 <%= form_with(model: [post, comment], url: post_comments_path(@post) ) do |f| %>
-    <%= f.text_area :text, class: "comment-text" %>
+    <%= f.text_area :text, placeholder:"コメントを入力...", class: "comment-text" %>
     <div class="comment-btn">
-      <%= f.submit "コメント", class: "comment-submit" %>
+      <%= f.submit "コメント", class: "btn btn-primary" %>
     </div>
 <% end %>
