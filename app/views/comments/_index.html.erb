@@ -27,7 +27,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-                    <button type="button" class="btn btn-primary" ><%= link_to '削除', post_comment_path(comment.post_id, comment.id), class: "delete-btn", method: :delete, remote: true %></button>
+                    <%= link_to '削除', post_comment_path(comment.post_id, comment.id), class: "btn btn-primary", method: :delete, remote: true %>
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@
         <% end %>
       </div>
       <div class='comment-bottom'>
-        <p><%= comment.text %></p>
+        <p><%=safe_join(comment.text.split("\n"),tag(:br)) %></p>
       </div>
     </div>
   <% end %>
