@@ -26,9 +26,6 @@
   transition: all .5s ease;
 }
 
-.post-video:hover {
-  opacity: 0.7;
-}
 
 .post-info {
   margin: 10px;
