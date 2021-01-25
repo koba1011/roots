@@ -77,3 +77,18 @@
   margin-right: 5px;
 }
 
+.post-show-user-link {
+  color: black;
+}
+
+.post-show-user-link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.post-show-user-icon{
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  margin-top: 10px;
+}

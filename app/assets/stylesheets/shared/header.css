@@ -63,3 +63,9 @@
   width: 3vw;
   margin-right: 40px;
 }
+
+.user-icon {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}

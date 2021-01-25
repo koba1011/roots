@@ -39,6 +39,12 @@
           </div>
       <% end %>
     </div>
+    <div class="post-show-user">
+      <%= link_to user_path(@post.user.id), class: "post-show-user-link" do %>
+        <%= image_tag "profile_icon.png", class: "post-show-user-icon" %>
+        <%= @post.user.user_name %>
+      <% end %>
+    </div>
     <% if @post.describe.present? %>
       <div class="post-show-describe">
         <p><%=safe_join(@post.describe.split("\n"),tag(:br)) %></p>
