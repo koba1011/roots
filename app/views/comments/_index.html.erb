@@ -2,7 +2,10 @@
   <% unless comment.id.nil? %>
     <div class='comment-display'>
       <div class='comment-top'>
-        <span class="comment-user-name"><%= comment.user.user_name %></span>
+        <%= link_to user_path(comment.user.id), class: "comment-user-link" do %>
+          <%= image_tag "profile_icon.png", class: "comment-user-icon" %>
+          <span class="comment-user-name"><%= comment.user.user_name %></span>
+        <% end %>
         <span class="comment-time"><time datetime="<%= comment.created_at %>"><%= time_ago_in_words(comment.created_at)+"前" %></time></span>
         <% if comment.user == current_user %>
           <div class="btn-group dropleft float-right">
@@ -34,9 +37,7 @@
             </div>
           </div>
         <% end %>
-      </div>
-      <div class='comment-bottom'>
-        <p><%=safe_join(comment.text.split("\n"),tag(:br)) %></p>
+        <div class="comment"><%=safe_join(comment.text.split("\n"),tag(:br)) %></div>
       </div>
     </div>
   <% end %>
