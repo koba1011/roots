@@ -11,11 +11,15 @@
         <li><%= link_to image_tag("post-new.png", class: "post-new-icon"), new_post_path %></li>
         <div class="dropdown">
           <div class="header-user-icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "profile_icon.png", class: "user-icon" %>
+            <% if current_user.image.present? %>
+              <%= image_tag current_user.image, class: "user-icon" %>
+            <% else %>
+              <%= image_tag "profile_icon.png", class: "user-icon" %>
+            <% end %>
           </div>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <%= link_to "プロフィール", user_path(current_user.id), class: "dropdown-item" %>
-            <%= link_to "アカウント編集", "#", class: "dropdown-item"%>
+            <%= link_to "プロフィール編集",  edit_user_registration_path(current_user.id), class: "dropdown-item"%>
             <div class="dropdown-divider"></div>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>

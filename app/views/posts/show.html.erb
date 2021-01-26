@@ -41,7 +41,11 @@
     </div>
     <div class="post-show-user">
       <%= link_to user_path(@post.user.id), class: "post-show-user-link" do %>
-        <%= image_tag "profile_icon.png", class: "post-show-user-icon" %>
+        <% if @post.user.image.present? %>
+          <%= image_tag @post.user.image, class: "post-show-user-icon" %>
+        <% else %>
+          <%= image_tag "profile_icon.png", class: "post-show-user-icon" %>
+        <% end %>
         <%= @post.user.user_name %>
       <% end %>
     </div>

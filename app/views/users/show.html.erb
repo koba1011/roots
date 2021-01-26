@@ -3,12 +3,16 @@
     <div class="user-show-content">
       <div class="user-profile d-flex flex-row">
         <div class="user-profile-img">
-          <%= image_tag "profile_icon.png", class: "user-show-icon" %>
+          <% if @user.image.present? %>
+            <%= image_tag @user.image, class: "user-show-icon" %>
+          <% else %>
+            <%= image_tag "profile_icon.png", class: "user-show-icon" %>
+          <% end %>
         </div>
         <ul class="user-show-right ">
           <li class="user-show-user-name"><%= @user.user_name %></li>
           <li class="user-show-postcount">投稿<%= @user.posts.count %>件</li>
-          <li class="user-show-profile">初めまして</li>
+          <li class="user-show-profile"><%=safe_join(@user.profile.split("\n"),tag(:br)) %></li>
         </ul>
       </div>
       <div class="user-show-posts">
