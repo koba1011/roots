@@ -67,4 +67,36 @@
   display: block;
   content:"";
   width: 300px;
-  }
+}
+
+.user-post-blank {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.user-video-show {
+  width: 500px;
+  border-radius: 20px;
+}
+
+.user-show-text {
+  font-size: 20px;
+  font-weight: 550;
+  margin: auto;
+}
+
+
+.user-post-blank2 {
+  width: 100%;
+  display: flex;
+  margin: 130px 0 130px;
+}
+
+.user-show-text2 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: auto;
+}

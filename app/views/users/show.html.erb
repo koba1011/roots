@@ -17,14 +17,24 @@
       </div>
       <div class="user-show-posts">
         <% @posts.each do |post| %>
-          <div class="user-show-video">
-            <% if post.video.present? %>
-              <%= link_to (video_tag rails_blob_path(post.video), class: "user-show-post-video"), post_path(post.id) %>
-            <% elsif post.youtube_url.present? %>
-              <%= link_to  post_path(post.id) do %>
-                <img class="user-show-post-video" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
+            <div class="user-show-video">
+              <% if post.video.present? %>
+                <%= link_to (video_tag rails_blob_path(post.video), class: "user-show-post-video"), post_path(post.id) %>
+              <% elsif post.youtube_url.present? %>
+                <%= link_to  post_path(post.id) do %>
+                  <img class="user-show-post-video" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
+                <% end %>
               <% end %>
-            <% end %>
+            </div>
+        <% end %>
+        <% if current_user.posts.blank? && @user.posts.blank? %>
+          <div class="user-post-blank">
+            <video class="user-video-show" src="/videos/video (1).mp4" loop autoplay muted type="video/mp4"></video>
+            <h2 class="user-show-text">撮影した動画やオススメの動画を共有しよう。</h2>
+          </div>
+        <% elsif @user.posts.blank? %>
+          <div class="user-post-blank2">
+            <h2 class="user-show-text2">投稿がありません。</h2>
           </div>
         <% end %>
       </div>
