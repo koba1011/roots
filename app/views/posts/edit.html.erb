@@ -20,16 +20,16 @@
         <%= f.text_area :youtube_url, class:"youtube-form" %>
         
         <%= f.label :caption, "タイトル", class: "post-edit-text" %>
-        <%= f.text_area :caption, class:"posts-text", id:"post-caption" maxlength:"40" %>
+        <%= f.text_area :caption, class:"posts-text", id:"post-caption", maxlength:"40" %>
         
         <%= f.label :describe, "説明", class: "post-edit-text" %>
-        <%= f.text_area :describe, class:"posts-text", id:"post-describe" rows:"7" ,maxlength:"2000" %>
+        <%= f.text_area :describe, class:"posts-text", id:"post-describe" ,rows:"7" ,maxlength:"1000" %>
         
         <%= f.label :place, "場所", class: "post-edit-text" %>
         <%= f.text_area :place, class:"posts-text", id:"post-place" %>
         
         <%= f.label :share_url, "URL", class: "post-edit-text" %>
-        <%= f.text_area :share_url, class:"posts-url", id:"post-share_url" placeholder:"オススメのお店や観光スポットをURLやテキストを付けて共有しよう!" %>
+        <%= f.text_area :share_url, class:"posts-url", id:"post-share_url", placeholder:"オススメのお店や観光スポットをURLやテキストを付けて共有しよう!" %>
       </div>
       <div class="post-btn-contents">
         <%= f.submit "編集を完了" ,class:"post-btn" %>
