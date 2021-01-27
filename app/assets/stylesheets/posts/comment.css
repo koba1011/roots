@@ -18,26 +18,12 @@
   margin-top: 2vh;
 }
 
-.comment-user-name {
-  font-size: 16px;
-}
-
-.comment-time {
-  font-size: 14px;
-  margin-left: 5px;
-  color: rgb(163, 163, 163);
-}
-
-.comment-bottom {
-  margin: 2vh 0 5vh;
-}
-
-.delete-btn {
-  color: #fff;
-  text-decoration: none;
-}
-
 .comment-user-link {
+  color: black;
+}
+
+.comment-user-link:hover {
+  text-decoration: none;
   color: black;
 }
 
@@ -46,12 +32,18 @@
   height: 48px;
   margin-right: 10px;
   margin-top: 20px;
+  border-radius: 50%;
+  background-color: black;
 }
 
+.comment-user-name {
+  font-size: 16px;
+}
 
-.comment-user-link:hover {
-  text-decoration: none;
-  color: black;
+.comment-time {
+  font-size: 14px;
+  margin-left: 5px;
+  color: rgb(163, 163, 163);
 }
 
 .comment {

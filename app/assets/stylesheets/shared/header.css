@@ -3,8 +3,7 @@
 }
 
 .top-page-header {
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
   padding: 2vh 15vw;
   display: flex;
   flex-direction: column;
@@ -52,13 +51,6 @@
   justify-content:center;
 }
 
-
-.user-nickname {
-  text-decoration: none;
-  color: #333333;
-  font-weight: bold;
-}
-
 .post-new-icon {
   width: 3vw;
   margin-right: 40px;
@@ -72,4 +64,6 @@
   width: 48px;
   height: 48px;
   cursor: pointer;
+  border-radius: 50%;
+  background-color: black;
 }

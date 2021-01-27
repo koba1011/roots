@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("jquery")
 require("bootstrap/dist/js/bootstrap")
+require("../image")
 
 window.$ = $;
 
