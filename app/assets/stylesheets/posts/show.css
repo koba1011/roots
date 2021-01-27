@@ -12,15 +12,6 @@
   width: 70vw;
 }
 
-.post-caption {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.post-user-name {
-  margin: 10px;
-}
-
 .post-video-show {
   width: 100%;
 }
@@ -31,45 +22,14 @@
   border-bottom: 1px solid rgba(233, 233, 233, 0.884);
 }
 
-.post-show-describe {
-  border-bottom: 1px solid rgba(233, 233, 233, 0.884);
-  margin-top: 2vh;
-  padding-bottom: 8vh;
-}
-
-.post-show-url {
-  border-bottom: 1px solid rgba(233, 233, 233, 0.884);
-  margin-top: 2vh;
-  padding-bottom: 4vh;
-}
-
-.post-show-link-title {
-  margin-bottom: 2vh;
-}
-
-.post-show-user {
-  margin-bottom: 3vh;
-}
-
-.post-show-place {
-  margin: 2vh 0 2vh;
+.post-caption {
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .post-time {
   font-size: 14px;
   margin-left: 20px;
-}
-
-.post-show-comments {
-  border-top: 1px solid rgba(233, 233, 233, 0.884);
-}
-
-.post-show-comments {
-  padding-top: 2vh;
-}
-
-.post-show-btn-list {
-  text-align: right;
 }
 
 .post-show-btn {
@@ -92,5 +52,37 @@
   border-radius: 50%;
   margin-right: 10px;
   margin-top: 10px;
+  background-color: black;
+}
+
+.post-show-describe {
+  border-bottom: 1px solid rgba(233, 233, 233, 0.884);
+  margin-top: 2vh;
+  padding-bottom: 8vh;
+}
+
+.post-show-url {
+  border-bottom: 1px solid rgba(233, 233, 233, 0.884);
+  margin-top: 2vh;
+  padding-bottom: 4vh;
+}
+
+.post-show-link-title {
+  margin-bottom: 2vh;
+}
+
+.post-show-place {
+  margin: 2vh 0 2vh;
+}
+
+.post-show-comments {
+  border-top: 1px solid rgba(233, 233, 233, 0.884);
+  padding-top: 2vh;
+}
+
+.comment-current-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   background-color: black;
 }

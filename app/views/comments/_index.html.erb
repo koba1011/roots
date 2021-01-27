@@ -12,6 +12,7 @@
         <% end %>
         <span class="comment-time"><time datetime="<%= comment.created_at %>"><%= time_ago_in_words(comment.created_at)+"前" %></time></span>
         <% if comment.user == current_user %>
+          <%# 削除ボタン%>
           <div class="btn-group dropleft float-right">
             <button type="button" class="btn btn-link dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             </button>
@@ -40,7 +41,9 @@
               </div>
             </div>
           </div>
+          <%# /削除ボタン %>
         <% end %>
+        
         <div class="comment"><%=safe_join(comment.text.split("\n"),tag(:br)) %></div>
       </div>
     </div>

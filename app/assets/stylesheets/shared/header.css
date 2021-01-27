@@ -51,13 +51,6 @@
   justify-content:center;
 }
 
-
-.user-nickname {
-  text-decoration: none;
-  color: #333333;
-  font-weight: bold;
-}
-
 .post-new-icon {
   width: 3vw;
   margin-right: 40px;

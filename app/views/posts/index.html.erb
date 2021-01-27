@@ -1,5 +1,6 @@
 <% if user_signed_in? %>
   <%= render "shared/header" %>
+
   <div class="main">
     <div class="post-contents">
       <% @posts.each do |post| %>
@@ -8,6 +9,7 @@
             <div class="post-user-name">
               <%= post.user.user_name %>
             </div>
+            <%# 投稿が動画かyoutubeの共有かを判断 %>
             <% if post.video.present? %>
               <%= link_to (video_tag rails_blob_path(post.video), class: "post-video"), post_path(post.id) %>
             <% elsif post.youtube_url.present? %>
@@ -15,6 +17,7 @@
                 <img class="youtube-image" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
               <% end %>
             <% end %>
+            <%# /投稿が動画かyoutubeの共有かを判断 %>
           </div>
           <div class="post-info">
             <%= link_to post.caption, post_path(post.id), class: "caption-link" %>
@@ -27,9 +30,12 @@
       <% end %>
     </div>
   </div>
+
   <%= render "shared/footer" %>
+<%# ログインしていないユーザーの表示を変更 %>
 <% else %>
   <%= render "shared/second-index" %>
 <% end %>
+<%# /ログインしていないユーザーの表示を変更 %>
 
 

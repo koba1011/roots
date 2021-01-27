@@ -69,6 +69,8 @@
   width: 300px;
 }
 
+/*投稿がないときの表示*/
+
 .user-post-blank {
   background-color: #fff;
   width: 100%;
@@ -100,3 +102,5 @@
   font-weight: normal;
   margin: auto;
 }
+
+/*投稿がないときの表示*/

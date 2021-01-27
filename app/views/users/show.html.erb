@@ -1,43 +1,51 @@
 <%= render "shared/header" %>
-  <div class="user-show-contents">
-    <div class="user-show-content">
-      <div class="user-profile d-flex flex-row">
-        <div class="user-profile-img">
-          <% if @user.image.present? %>
-            <%= image_tag @user.image, class: "user-show-icon" %>
-          <% else %>
-            <%= image_tag "profile_icon.png", class: "user-show-icon" %>
+
+<div class="user-show-contents">
+  <div class="user-show-content">
+    <div class="user-profile d-flex flex-row">
+      <div class="user-profile-img">
+        <%# プロフィール画像の登録状態で表示を変更 %>
+        <% if @user.image.present? %>
+          <%= image_tag @user.image, class: "user-show-icon" %>
+        <% else %>
+          <%= image_tag "profile_icon.png", class: "user-show-icon" %>
+        <% end %>
+        <%# /プロフィール画像の登録状態で表示を変更　%>
+      </div>
+      <ul class="user-show-right ">
+        <li class="user-show-user-name"><%= @user.user_name %></li>
+        <li class="user-show-postcount">投稿<%= @user.posts.count %>件</li>
+        <li class="user-show-profile"><%=safe_join(@user.profile.split("\n"),tag(:br)) %></li>
+      </ul>
+    </div>
+    <div class="user-show-posts">
+      <% @posts.each do |post| %>
+        <div class="user-show-video">
+          <%# 投稿が動画かyoutubeの共有かを判断 %>
+          <% if post.video.present? %>
+            <%= link_to (video_tag rails_blob_path(post.video), class: "user-show-post-video"), post_path(post.id) %>
+          <% elsif post.youtube_url.present? %>
+            <%= link_to  post_path(post.id) do %>
+              <img class="user-show-post-video" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
+            <% end %>
           <% end %>
+          <%# /投稿が動画かyoutubeの共有かを判断 %>
         </div>
-        <ul class="user-show-right ">
-          <li class="user-show-user-name"><%= @user.user_name %></li>
-          <li class="user-show-postcount">投稿<%= @user.posts.count %>件</li>
-          <li class="user-show-profile"><%=safe_join(@user.profile.split("\n"),tag(:br)) %></li>
-        </ul>
-      </div>
-      <div class="user-show-posts">
-        <% @posts.each do |post| %>
-            <div class="user-show-video">
-              <% if post.video.present? %>
-                <%= link_to (video_tag rails_blob_path(post.video), class: "user-show-post-video"), post_path(post.id) %>
-              <% elsif post.youtube_url.present? %>
-                <%= link_to  post_path(post.id) do %>
-                  <img class="user-show-post-video" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
-                <% end %>
-              <% end %>
-            </div>
-        <% end %>
-        <% if current_user.posts.blank? && @user.posts.blank? %>
-          <div class="user-post-blank">
-            <video class="user-video-show" src="/videos/video (1).mp4" loop autoplay muted type="video/mp4"></video>
-            <h2 class="user-show-text">撮影した動画やオススメの動画を共有しよう。</h2>
-          </div>
-        <% elsif @user.posts.blank? %>
-          <div class="user-post-blank2">
-            <h2 class="user-show-text2">投稿がありません。</h2>
-          </div>
-        <% end %>
-      </div>
+      <% end %>
+      <%# 投稿がない時の表示 %>
+      <% if current_user.posts.blank? && @user.posts.blank? %>
+        <div class="user-post-blank">
+          <video class="user-video-show" src="/videos/video (1).mp4" loop autoplay muted type="video/mp4"></video>
+          <h2 class="user-show-text">撮影した動画やオススメの動画を共有しよう。</h2>
+        </div>
+      <% elsif @user.posts.blank? %>
+        <div class="user-post-blank2">
+          <h2 class="user-show-text2">投稿がありません。</h2>
+        </div>
+      <% end %>
+      <%# /投稿がない時の表示 %>
     </div>
   </div>
+</div>
+
 <%= render "shared/footer"%>

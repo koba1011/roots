@@ -11,11 +11,13 @@
         <li><%= link_to image_tag("post-new.png", class: "post-new-icon"), new_post_path %></li>
         <div class="dropdown">
           <div class="header-user-icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%# プロフィール画像の登録状態で表示を変更 %>
             <% if current_user.image.present? %>
               <%= image_tag current_user.image, class: "user-icon" %>
             <% else %>
               <%= image_tag "profile_icon.png", class: "user-icon" %>
             <% end %>
+            <%# /プロフィール画像の登録状態で表示を変更 %>
           </div>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <%= link_to "プロフィール", user_path(current_user.id), class: "dropdown-item" %>

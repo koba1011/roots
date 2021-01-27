@@ -1,42 +1,47 @@
 <%= render "shared/header" %>
+
 <div class="post-show-contents">
   <div class="post-show-content">
     <div class="post-video-content">
+      <%# 投稿が動画かyoutubeの共有かを判断 %>
       <%if @post.video.present? %>
        <video class="post-video-show" src="<%= rails_blob_path(@post.video) %>"type="video/mp4" controls></video>
       <% elsif @post.youtube_url.present? %>
         <iframe class="post-video-show" height="500" src="https://www.youtube.com/embed/<%= @post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <% end %>
+      <%# /投稿が動画かyoutubuの共有かを判断 %>
     </div>
     <div class="post-show-caption">
       <span class="post-caption"><%= @post.caption %></span>
       <span class="post-time"><%= time_ago_in_words(@post.created_at)+"前に投稿" %></span> 
       <% if @post.user_id == current_user.id %>
-          <button type="button" class= "btn btn-secondary float-right btn-sm" data-toggle="modal" data-target="#exampleModal1">
-            投稿の削除
-          </button>
-          <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">投稿の削除</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  投稿を完全に削除しますか？
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-                  <%= link_to "投稿の削除", post_path(@post.id), method: :delete, class: "btn btn-primary" %>
-                </div>
+        <%# 削除機能 %>
+        <button type="button" class= "btn btn-secondary float-right btn-sm" data-toggle="modal" data-target="#exampleModal1">
+          投稿の削除
+        </button>
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">投稿の削除</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                投稿を完全に削除しますか？
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                <%= link_to "投稿の削除", post_path(@post.id), method: :delete, class: "btn btn-primary" %>
               </div>
             </div>
           </div>
-          <div class="post-show-btn float-right">
-            <%= button_to "投稿の編集", edit_post_path(@post.id), method: :get, class: "btn btn-secondary btn-sm" %>
-          </div>
+        </div>
+        <%# /削除機能 %>
+        <div class="post-show-btn float-right">
+          <%= button_to "投稿の編集", edit_post_path(@post.id), method: :get, class: "btn btn-secondary btn-sm" %>
+        </div>
       <% end %>
     </div>
     <div class="post-show-user">
@@ -60,12 +65,16 @@
         <%= Rinku.auto_link(@post.share_url, :all, 'target="_blank"').html_safe %>
       </div>
     <% end %>
+    <%# 場所が入力されていたらmapを表示 %>
     <% if @post.place.present?%>
       <div class="post-show-place">
         <%= @post.place %>
       </div>
       <%= render 'shared/map', collection: @post %>
     <% end %>
+    <%# /場所が入力されていたらmapを表示 %>
+
+    <%# コメントの表示 %>
     <div class="post-show-comments">
       <div class="comments-text"><%= @comments.count %>件のコメント</div>
       <% if user_signed_in? %>
@@ -81,5 +90,8 @@
         </ul>
       </div>
     </div>
+    <%# /コメントの表示 %>
   </div>
 </div>
+
+<%= render "shared/footer" %>

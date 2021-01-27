@@ -5,47 +5,36 @@
     <h2 class="posts-post-title">動画を投稿するかオススメのYouTube動画を紹介しよう！</h2>
     <%= form_with model: @post, url: posts_path, local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
-    <div class="img-upload">
-      <div class="weight-bold-text">
-        動画ファイルを選択
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          動画ファイルを選択
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :video, id:"posts-image" %>
+        </div>
       </div>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :video, id:"posts-image" %>
+      <div class="new-posts">
+        <h2 class="posts-post-text">Youtubeの動画を共有する場合は、こちらにURLを入力してください</h2>
+        <%= f.text_area :youtube_url, class:"youtube-form", id:"post-youtube_url", placeholder:"YouTubeURL" %>
+        <div class="weight-bold-text">
+          詳細
+        </div>
+        <%= f.text_area :caption, class:"posts-text", id:"post-caption", placeholder:"タイトル", maxlength:"40" %>
+        <%= f.text_area :describe, class:"posts-text", id:"post-describe", placeholder:"説明" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :place, class:"posts-text", id:"post-place", placeholder:"場所" %>
+        <div class="weight-bold-text2">
+          URL
+        </div>
+        <%= f.text_area :share_url, class:"posts-url", id:"post-share_url", placeholder:"オススメのお店や観光スポットをURLやテキストを付けて共有しよう!" %>
       </div>
-    </div>
-    <div class="new-posts">
-      <h2 class="posts-post-text">Youtubeの動画を共有する場合は、こちらにURLを入力してください</h2>
-      <%= f.text_area :youtube_url, class:"youtube-form", id:"post-name", placeholder:"YouTubeURL" %>
-      <div class="weight-bold-text">
-        詳細
+      <div class="post-btn-contents">
+        <%= f.submit "投稿する" ,class:"post-btn" %>
       </div>
-      <%= f.text_area :caption, class:"posts-text", id:"post-name", placeholder:"タイトル", maxlength:"40" %>
-      <div class="items-explain">
-        <%= f.text_area :describe, class:"posts-text", id:"post-info", placeholder:"説明" ,rows:"7" ,maxlength:"1000" %>
-      </div>
-      <%= f.text_area :place, class:"posts-text", id:"gmap", placeholder:"場所" %>
-      <div class="weight-bold-text2">
-        URL
-      </div>
-      <%= f.text_area :share_url, class:"posts-url", id:"post-url", placeholder:"オススメのお店や観光スポットをURLやテキストを付けて共有しよう!" %>
-    </div>
-    <div class="post-btn-contents">
-      <%= f.submit "投稿する" ,class:"btn btn-primary btn-block" %>
-    </div>
+    <% end %>
   </div>
-  <% end %>
-
-  <footer class="posts-post-footer">
-    <ul class="menu">
-      <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">Roots利用規約</a></li>
-      <li><a href="#">特定商取引に関する表記</a></li>
-    </ul>
-    <p class="inc">
-      ©︎Roots
-    </p>
-  </footer>
 </div>
+
+<%= render "shared/second-footer" %>

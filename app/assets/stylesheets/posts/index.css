@@ -26,6 +26,9 @@
   transition: all .5s ease;
 }
 
+.youtube-image {
+  width: 100%;
+}
 
 .post-info {
   margin: 10px;
@@ -34,10 +37,6 @@
 .caption-link {
   text-decoration: none;
   color: black;
-}
-
-.youtube-image {
-  width: 100%;
 }
 
 .post-index-time {
