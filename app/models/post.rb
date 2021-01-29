@@ -7,4 +7,12 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   validates :caption, presence: true
+
+  def self.search(search)
+    if search != ""
+      Post.where( 'caption LIKE ? OR place LIKE ?', "%#{search}%", "%#{search}%" )
+    else
+      Post.all
+    end
+  end
 end

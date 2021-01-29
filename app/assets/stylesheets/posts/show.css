@@ -32,6 +32,12 @@
   margin-left: 20px;
 }
 
+.post-youtube {
+  font-size: 14px;
+  margin-left: 15px;
+  color: #FF0000;
+}
+
 .post-show-btn {
   display: inline-block;
   margin-right: 5px;
