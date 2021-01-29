@@ -1,0 +1,46 @@
+<%= render "shared/header" %>
+
+<div class="search-contents">
+  <div class="search-content">
+    <div class="search-image d-flex flex-row">
+      <div class="search-post-img">
+        <%# 検索結果の投稿の写真をランダムで表示 && 投稿かyoutubeかを判別 %>
+        <% @random.each do |post| %>
+          <% if post.video.present? %>
+            <%= video_tag rails_blob_path(post.video), class: "search-show-icon" %>
+          <% elsif post.youtube_url.present? %>
+            <img class= "search-show-icon" src="http://img.youtube.com/vi/<%= post.youtube_url %>/maxresdefault.jpg" >
+          <% end %>
+        <% end %>
+        <%# /検索結果の投稿の写真をランダムで表示 && 投稿かyoutubeかを判別%>
+      </div>
+      <ul class="search-right ">
+        <li class="search-keyword"><%= params[:keyword] %></li>
+        <li class="search-count">投稿<%= @posts.count %>件</li>
+      </ul>
+    </div>
+    <div class="search-show-posts">
+      <% @posts.reverse_each do |post| %>
+        <div class="search-show-video">
+          <%# 投稿が動画かyoutubeの共有かを判断 %>
+          <% if post.video.present? %>
+            <%= link_to (video_tag rails_blob_path(post.video), class: "search-post-video"), post_path(post.id) %>
+          <% elsif post.youtube_url.present? %>
+            <%= link_to  post_path(post.id) do %>
+              <img class="search-post-video" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
+            <% end %>
+          <% end %>
+          <%# /投稿が動画かyoutubeの共有かを判断 %>
+        </div>
+      <% end %>
+      
+      <%# 検索結果がないときの表示 %>
+      <% if @posts.blank? %>
+        <div class="search-post-blank">
+          <h2 class="search-text">投稿がありません。</h2>
+        </div>
+      <% end %>
+      <%# /検索結果がない時の表示 %>
+    </div>
+  </div>
+</div>

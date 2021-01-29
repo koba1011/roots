@@ -60,6 +60,7 @@ class PostsController < ApplicationController
 
   def search
     @posts = Post.search(params[:keyword])
+    @random = @posts.order("RAND()").limit(1)
   end
 
   private
