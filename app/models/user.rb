@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :posts
   has_many :comments
+  has_many :favorites, dependent: :destroy
+  has_many :favorite_posts, through: :favorites, source: :post
   
   with_options presence: true do
     validates :name

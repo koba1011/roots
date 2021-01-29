@@ -5,6 +5,7 @@ class Post < ApplicationRecord
   belongs_to :user
   has_one_attached :video
   has_many :comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   validates :caption, presence: true
 
