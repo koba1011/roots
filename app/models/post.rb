@@ -16,4 +16,8 @@ class Post < ApplicationRecord
       Post.all
     end
   end
+
+  def favorite_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
 end
