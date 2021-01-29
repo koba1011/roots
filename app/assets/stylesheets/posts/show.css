@@ -43,6 +43,7 @@
   margin-right: 5px;
 }
 
+
 .post-show-user-link {
   color: black;
 }
@@ -59,6 +60,11 @@
   margin-right: 10px;
   margin-top: 10px;
   background-color: black;
+}
+
+.favorite-btn {
+  margin-top: 10px;
+  color: #fff;
 }
 
 .post-show-describe {
@@ -82,7 +88,6 @@
 }
 
 .post-show-comments {
-  border-top: 1px solid rgba(233, 233, 233, 0.884);
   padding-top: 2vh;
 }
 

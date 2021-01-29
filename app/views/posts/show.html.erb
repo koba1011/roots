@@ -47,6 +47,7 @@
         </div>
       <% end %>
     </div>
+
     <div class="post-show-user">
       <%= link_to user_path(@post.user.id), class: "post-show-user-link" do %>
         <% if @post.user.image.present? %>
@@ -56,6 +57,9 @@
         <% end %>
         <%= @post.user.user_name %>
       <% end %>
+      <div class="float-right">
+        <%= button_to "お気に入り登録", "#", class: "favorite-btn btn btn-outline-warning" %>
+      </div>
     </div>
     <% if @post.describe.present? %>
       <div class="post-show-describe">
