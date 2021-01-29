@@ -7,7 +7,7 @@
         <div class="post-content">
           <div class="post-video-content">
             <div class="post-user-name">
-              <%= post.user.user_name %>
+              <%= link_to post.user.user_name, user_path(post.user.id), class: "post-name-link" %>
             </div>
             <%# 投稿が動画かyoutubeの共有かを判断 %>
             <% if post.video.present? %>
@@ -23,7 +23,7 @@
             <%= link_to post.caption, post_path(post.id), class: "caption-link" %>
             <span class="post-index-time"><%= time_ago_in_words(post.created_at)+"前" %></span>
             <% if post.youtube_url.present? %>
-              <span class="post-youtube-text">Youtube動画</span>
+              <span class="post-youtube-text">Youtube動画の共有</span>
             <% end %>
           </div>
         </div>
