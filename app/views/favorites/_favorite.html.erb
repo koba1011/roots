@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
-    <% if post.favorite_by?(current_user) %>
-      <%= button_to "お気に入り済み",  post_favorites_path(post.id), method: :delete, remote: true, class: "favorite-btn2" %>
-    <% else %>
-      <%= button_to "お気に入り登録",  post_favorites_path(post.id), method: :post, remote: true, class: "favorite-btn btn btn-outline-warning" %>
-    <% end %>
+  <% if post.favorite_by?(current_user) %>
+    <%= button_to "お気に入り済み",  post_favorites_path(post.id), method: :delete, remote: true, class: "favorite-btn2" %>
+  <% else %>
+    <%= button_to "お気に入り登録",  post_favorites_path(post.id), method: :post, remote: true, class: "favorite-btn btn btn-outline-warning" %>
+  <% end %>
 <% end %>
