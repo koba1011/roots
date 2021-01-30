@@ -1,0 +1,106 @@
+.favorite-contents {
+  background-color: rgb(252, 252, 252);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 0px;
+}
+
+.favorite-content {
+  margin-top: 30px;
+  padding-bottom: 2vh;
+  width: 70vw;
+}
+
+.favorite-count {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.favorite-posts{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 50px 0 50px;
+  border-top: 1px solid rgba(233, 233, 233, 0.884);
+}
+
+.favorite-posts::after {
+  display: block;
+  content:"";
+  width: 300px;
+}
+
+.favorite-video {
+  background-color: #fff;
+  padding-bottom: 0px;
+  margin-top: 30px;
+  border: 1px solid rgba(216, 216, 216, 0.753);
+  border-radius: 2px;
+}
+
+.favorite-user-name {
+  margin: 5px;
+}
+
+.favorite-name-link{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.favorite-name-link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.favorite-post-video {
+  width: 300px;
+  height: 300px;
+  margin-bottom: -6px;
+  object-fit: cover;
+}
+
+.favorite-post-video2 {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.favorite-post-info {
+  margin: 5px;
+}
+
+.favorite-caption-link {
+  text-decoration: none;
+  color: black;
+}
+
+.favorite-caption-link:hover {
+  text-decoration: none;
+  color: black;
+}
+.favorite-post-time {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.favorite-youtube-text {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #FF0000;
+}
+
+/*検索結果がないときの表示*/
+
+.favorite-blank {
+  width: 100%;
+  display: flex;
+  margin: 130px 0 250px;
+}
+
+.favorite-text {
+  font-size: 25px;
+  font-weight: normal;
+  margin: auto;
+}

@@ -64,7 +64,14 @@
 
 .favorite-btn {
   margin-top: 10px;
-  color: #fff;
+}
+
+.favorite-btn2 {
+  margin: 17px 13px 0 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: rgb(146, 146, 146);
 }
 
 .post-show-describe {

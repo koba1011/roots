@@ -63,6 +63,11 @@ class PostsController < ApplicationController
     @random = @posts.order("RAND()").limit(1)
   end
 
+  def favorites
+    @posts = current_user.favorite_posts.includes(:user).order("created_at DESC")
+  end
+
+
   private
 
   def post_params

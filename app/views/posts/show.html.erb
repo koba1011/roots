@@ -58,7 +58,9 @@
         <%= @post.user.user_name %>
       <% end %>
       <div class="float-right">
-        <%= button_to "お気に入り登録", "#", class: "favorite-btn btn btn-outline-warning" %>
+        <div id="favorites_buttons_<%= @post.id %>">
+          <%= render partial: 'favorites/favorite', locals: { post: @post} %>
+        </div>
       </div>
     </div>
     <% if @post.describe.present? %>
