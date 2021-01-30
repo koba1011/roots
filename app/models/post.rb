@@ -5,6 +5,7 @@ class Post < ApplicationRecord
   belongs_to :user
   has_one_attached :video
   has_many :comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   validates :caption, presence: true
 
@@ -14,5 +15,9 @@ class Post < ApplicationRecord
     else
       Post.all
     end
+  end
+
+  def favorite_by?(user)
+    favorites.where(user_id: user.id).exists?
   end
 end

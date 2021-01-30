@@ -43,6 +43,7 @@
   margin-right: 5px;
 }
 
+
 .post-show-user-link {
   color: black;
 }
@@ -61,10 +62,23 @@
   background-color: black;
 }
 
+.favorite-btn {
+  margin-top: 10px;
+}
+
+.favorite-btn2 {
+  font-size: 14px;
+  margin: 17px 13px 0 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: rgb(146, 146, 146);
+}
+
 .post-show-describe {
   border-bottom: 1px solid rgba(233, 233, 233, 0.884);
   margin-top: 2vh;
-  padding-bottom: 8vh;
+  padding-bottom: 3vh;
 }
 
 .post-show-url {
@@ -75,6 +89,7 @@
 
 .post-show-link-title {
   margin-bottom: 2vh;
+  font-size: 20px;
 }
 
 .post-show-place {
@@ -82,7 +97,6 @@
 }
 
 .post-show-comments {
-  border-top: 1px solid rgba(233, 233, 233, 0.884);
   padding-top: 2vh;
 }
 
