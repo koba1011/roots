@@ -1,0 +1,8 @@
+<div id="follow_count">
+  <%= link_to followers_user_path(@user.id), class: "follow-link" do %>
+    フォロワー<%= @user.followers.count %>人
+  <% end %>
+  <%= link_to following_user_path(@user.id), class: "follow-link" do %>
+    フォロー中<%= @user.following.count %>人
+  <% end %>
+</div>

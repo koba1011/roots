@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+
+<div class="follow-contents">
+  <div class="follow-content">
+    <%= render 'profile' %>
+    <div class="user-show-follow">
+      <h2 class=follow-title>フォロワー</h2>
+
+      <% @users.each do |user| %>
+        <div class="follow-list">
+          <div>
+            <%= link_to user_path(user.id), class: "follow-user-link" do %>
+              <% if user.image.present? %>
+                <%= image_tag user.image, class: "follow-icon"%>
+              <% else %>
+                <%= image_tag "profile_icon.png", class: "follow-icon"%>
+              <% end %>
+          </div>
+            <ul class="follow-profile">
+              <span class="follow-user-name"><%= user.user_name%></span>
+            <% end %>
+              <li class="follow-user-profile"><%= safe_join(user.profile.split("\n"),tag(:br)) %></li>
+            </ul>
+        </div>
+      <% end %>
+      
+    </div>
+  </div>
+</div>

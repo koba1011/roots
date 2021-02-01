@@ -1,12 +1,13 @@
 .post-show-contents {
+  background-color: #fff;
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin: 150px auto 50px;
+  margin: 0px auto 50px;
+  padding-top: 150px;
 }
 
 .post-show-content {
-  background-color: #fff;
   margin-bottom: 10vh;
   padding-bottom: 2vh;
   width: 70vw;

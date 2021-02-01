@@ -1,0 +1,30 @@
+<% if user_signed_in? && @user != current_user %>
+  <div id="follow_btn" class="follow-btns">
+    <% if current_user.following?(@user) %>
+      <div class="follow-form2">
+        <button type="button" class="follow-btn2" data-toggle="modal" data-target="#exampleModalCenter">
+          フォロー中
+        </button>
+      </div>
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body mx-auto">
+              <%= image_tag @user.image, class: "follow-delete-icon" %>
+            </div>
+            <div class="follow-text mx-auto"><%= @user.user_name %>のフォローをやめますか？</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+              <%= link_to "フォローをはずす", relationship_path(@user), method: :delete, remote: true, class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <%= form_with(url: relationships_path, method: :post, remote: true, class: "follow-form") do |f| %>
+        <%= hidden_field_tag :following_id, @user.id %>
+        <%= f.submit "フォローする", class: "follow-btn" %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
