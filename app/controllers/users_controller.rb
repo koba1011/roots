@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :set_user, only: [:show, :edit, :following, :followers]
+  before_action :set_user, only: [:show, :edit, :update, :following, :followers]
   
   def show
     @posts = @user.posts.order("created_at DESC")
@@ -13,8 +13,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_params)
-      redirect_to user_path(current_user.id)
+    if @user.update(user_params)
+      redirect_to user_path(@user.id)
     else
       render :edit
     end

@@ -16,9 +16,12 @@ class User < ApplicationRecord
   
   with_options presence: true do
     validates :name
-    validates :user_name, format: { with: /\A[a-zA-Z0-9]+\z/, message: "Please type using half-width characters"}
+    validates :user_name, format: { with: /\A[a-zA-Z0-9]+\z/, message: "は半角英数字で入力してください"}
   end
+  validates :email, uniqueness: true
+  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/, message: "は英字と数字の両方を含めて入力してください" }, on: :create
 
+  
   def following?(user)
     following_relationships.find_by(following_id: user.id)
   end

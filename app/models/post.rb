@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  
   geocoded_by :place
   after_validation :geocode, if: :place_changed?
 
@@ -7,7 +8,11 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
-  validates :caption, presence: true
+  with_options presence: true do
+    validates :caption
+  end
+  validate :video_or_youtube_url
+  
 
   def self.search(search)
     if search != ""
@@ -20,4 +25,10 @@ class Post < ApplicationRecord
   def favorite_by?(user)
     favorites.where(user_id: user.id).exists?
   end
+
+  def video_or_youtube_url
+    return if video.present? ^ youtube_url.present?
+    errors.add(:base, 'ビデオまたはYoutube動画URLのどちらか一方を選択してください')
+  end
+
 end
