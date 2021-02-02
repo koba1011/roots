@@ -16,6 +16,10 @@
             <%= link_to  post_path(post.id) do %>
               <img class="favorite-post-video2" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
             <% end %>
+          <% else %>
+            <div class="favorite-blank">
+              <h2 class="favorite-text">お気に入りはありません。</h2>
+            </div>
           <% end %>
           <%# /投稿が動画かyoutubeの共有かを判断 %>
           <div class="favorite-post-info">
@@ -29,11 +33,7 @@
       <% end %>
       
       <%# 検索結果がないときの表示 %>
-      <% if @posts.blank? %>
-        <div class="favorite-blank">
-          <h2 class="favorite-text">お気に入りはありません。</h2>
-        </div>
-      <% end %>
+
       <%# /検索結果がない時の表示 %>
     </div>
   </div>
