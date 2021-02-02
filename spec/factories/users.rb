@@ -3,8 +3,7 @@ FactoryBot.define do
     name      {Faker::Name.name}
     user_name {"abcd1011"}
     email     {Faker::Internet.free_email}
-    password = Faker::Internet.password(min_length: 6)
-    password  {password}
+    password  {"abcd1234"}
     password_confirmation {password}
   end
 end
