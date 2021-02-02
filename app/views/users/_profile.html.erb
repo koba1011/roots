@@ -12,9 +12,11 @@
     <div class="user-show-user-name"><%= @user.user_name %>
       <%= render "follow_btn" %>
     </div>
-    <li class="user-show-postcount">投稿<%= @user.posts.count %>件
-      <%= render "follow_count" %>
-    </li>
+    <%= link_to user_path(@user.id), class: "user-show-count-link" do %>
+      <li class="user-show-postcount">投稿<%= @user.posts.count %>件
+        <%= render "follow_count" %>
+      </li>
+    <% end %>
     <% if @user.profile.present? %>
       <li class="user-show-profile"><%=safe_join(@user.profile.split("\n"),tag(:br)) %></li>
     <% end %>

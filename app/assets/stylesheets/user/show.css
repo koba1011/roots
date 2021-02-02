@@ -37,6 +37,16 @@
   display: flex;
 }
 
+.user-show-count-link {
+  color: black;
+  text-decoration: none;
+}
+
+.user-show-count-link:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .user-show-postcount {
   font-size: 16px;
   margin-top: 10px;
