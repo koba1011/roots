@@ -5,7 +5,7 @@
     <h2 class="posts-post-title">動画を投稿するかオススメのYouTube動画を紹介しよう！</h2>
     <%= form_with model: @post, url: posts_path, local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
-      <div class="img-upload">
+      <div class="video-upload">
         <div class="weight-bold-text">
           動画ファイルを選択
         </div>
@@ -13,7 +13,7 @@
           <p>
             クリックしてファイルをアップロード
           </p>
-          <%= f.file_field :video, id:"posts-image" %>
+          <%= f.file_field :video, id:"posts-video" %>
         </div>
       </div>
       <div class="new-posts">
