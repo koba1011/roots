@@ -1,6 +1,5 @@
 .main {
   background-color: rgb(252, 252, 252);
-  display: flex;
 }
 
 .post-contents {
@@ -62,3 +61,28 @@
   margin-left: 10px;
   color: #FF0000;
 }
+
+/* 投稿がないときの表示 */
+
+.blank-index {
+  margin: 80px auto 30px;
+}
+
+.index-video {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  position: absolute;
+}
+
+.blank-index-text {
+  width: 650px;
+  position: relative;
+  top: 20px;
+  left: 5%;
+  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.562);
+}
+
+/* 投稿がないときの表示 */

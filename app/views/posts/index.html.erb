@@ -2,36 +2,46 @@
   <%= render "shared/header" %>
 
   <div class="main">
-    <div class="post-contents">
-      <% @posts.each do |post| %>
-        <div class="post-content">
-          <div class="post-video-content">
-            <div class="post-user-name">
-              <%= link_to post.user.user_name, user_path(post.user.id), class: "post-name-link" %>
-            </div>
-            <%# 投稿が動画かyoutubeの共有かを判断 %>
-            <% if post.video.present? %>
-              <%= link_to (video_tag rails_blob_path(post.video), class: "post-video"), post_path(post.id) %>
-            <% elsif post.youtube_url.present? %>
-              <%= link_to  post_path(post.id) do %>
-                <img class="youtube-image" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
+    <% if @posts.present? %>
+      <div class="post-contents">
+        <% @posts.each do |post| %>
+          <div class="post-content">
+            <div class="post-video-content">
+              <div class="post-user-name">
+                <%= link_to post.user.user_name, user_path(post.user.id), class: "post-name-link" %>
+              </div>
+              <%# 投稿が動画かyoutubeの共有かを判断 %>
+              <% if post.video.present? %>
+                <%= link_to (video_tag rails_blob_path(post.video), class: "post-video"), post_path(post.id) %>
+              <% elsif post.youtube_url.present? %>
+                <%= link_to  post_path(post.id) do %>
+                  <img class="youtube-image" src="http://img.youtube.com/vi/<%=post.youtube_url%>/maxresdefault.jpg" >
+                <% end %>
               <% end %>
-            <% end %>
-            <%# /投稿が動画かyoutubeの共有かを判断 %>
+              <%# /投稿が動画かyoutubeの共有かを判断 %>
+            </div>
+            <div class="post-info">
+              <%= link_to post.caption, post_path(post.id), class: "caption-link" %>
+              <span class="post-index-time"><%= time_ago_in_words(post.created_at)+"前" %></span>
+              <% if post.youtube_url.present? %>
+                <span class="post-youtube-text">Youtube動画の共有</span>
+              <% end %>
+            </div>
           </div>
-          <div class="post-info">
-            <%= link_to post.caption, post_path(post.id), class: "caption-link" %>
-            <span class="post-index-time"><%= time_ago_in_words(post.created_at)+"前" %></span>
-            <% if post.youtube_url.present? %>
-              <span class="post-youtube-text">Youtube動画の共有</span>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <%# 投稿がないときの表示 %>
+    <% else %>
+      <div class="blank-index">
+        <video class="index-video" src="/videos/video (1).mp4" loop autoplay muted type="video/mp4"></video>
+        <h2 class="blank-index-text">あなたのあの場所、あの景色を共有しよう</h2>
+      </div>
+    <% end %>
+    <%# 投稿がないときの表示 %>
   </div>
 
-  <%= render "shared/footer" %>
+
+
 <%# ログインしていないユーザーの表示を変更 %>
 <% else %>
   <%= render "shared/second-index" %>
