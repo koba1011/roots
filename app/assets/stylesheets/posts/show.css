@@ -18,8 +18,8 @@
 }
 
 .post-show-caption {
-  margin-top: 2vh;
-  padding-bottom: 2vh;
+  margin-top: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid rgba(233, 233, 233, 0.884);
 }
 
@@ -30,7 +30,7 @@
 
 .post-time {
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .post-youtube {
