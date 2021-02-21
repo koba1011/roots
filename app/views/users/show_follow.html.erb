@@ -19,7 +19,9 @@
             <ul class="follow-profile">
               <span class="follow-user-name"><%= user.user_name%></span>
             <% end %>
-              <li class="follow-user-profile"><%= safe_join(user.profile.split("\n"),tag(:br)) %></li>
+              <% if user.profile.present? %>
+                <li class="follow-user-profile"><%= safe_join(user.profile.split("\n"),tag(:br)) %></li>
+              <% end %>
             </ul>
         </div>
       <% end %>

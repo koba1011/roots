@@ -10,7 +10,11 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-body mx-auto">
-              <%= image_tag @user.image, class: "follow-delete-icon" %>
+              <% if @user.image.present? %>
+                <%= image_tag @user.image, class: "follow-delete-icon" %>
+              <% else %>
+                <%= image_tag "profile_icon.png", class: "follow-delete-icon" %>
+              <% end %>
             </div>
             <div class="follow-text mx-auto"><%= @user.user_name %>のフォローをやめますか？</div>
             <div class="modal-footer">
