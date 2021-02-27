@@ -25,11 +25,12 @@
 }
 
 .roots-icon2 {
-  width: 10vw;
+  width: 7vw;
 }
 
 .search-form {
-  margin: auto auto;
+  margin: auto;
+  padding-left: 40px;
 }
 
 .input-box {
