@@ -1,3 +1,14 @@
+![Roots](https://user-images.githubusercontent.com/72078024/110114341-cfb3e700-7df7-11eb-9d6d-394c72a80db6.gif)
+
+<h2 align="center">旅行専門動画投稿サイトRoots</h2>
+
+<p align="center">
+  <a href="https://rubyonrails.org/"><img src="https://user-images.githubusercontent.com/72078024/110115307-3be31a80-7df9-11eb-8df1-5e9efc4b0046.jpeg" width="80px;" /></a>
+  <br>
+  <a href="https://getbootstrap.jp/"><img src="https://user-images.githubusercontent.com/72078024/110116417-d09a4800-7dfa-11eb-972b-4df98cda6730.png" height="45px; /></a>
+</p>
+
+
 # テーブル設計
 
 ## users テーブル
