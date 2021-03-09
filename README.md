@@ -86,7 +86,23 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 
 <h3>ユーザー詳細画面</h3>
 
-![8937a7b4ac2fe04981f1808453ebe2a3](https://user-images.githubusercontent.com/72078024/110126583-e95d2a80-7e07-11eb-8c6d-d64a7b816927.gif)
+![f5f2fd4cfa2548a2e7bf8d14deeea11a](https://user-images.githubusercontent.com/72078024/110507279-35c7a380-8143-11eb-8789-e467faccc751.gif)
+
+
+ここで表示されるのは以下の通りです。<br />
+<br />
+・プロフィール画像 (好きな画像にすることができます)<br />
+・ユーザネーム<br />
+・投稿件数<br/>
+・フォロー機能<br/>
+・フォロー、フォロワー人数 <br />
+・自己紹介<br />
+・投稿したもの
+
+投稿がない場合はこのように表示されます。<br />
+
+<image src="https://i.gyazo.com/d755c3d7fabcd3a2e2c278387cc0dc46.png" />
+
 
 
 
