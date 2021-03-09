@@ -162,6 +162,9 @@ RSpec
 VSCode
 
 ## 課題や今後実装したい機能
+今後は、多言語かに対応できるようにしたいです。というのも世界の人と気軽に繋がれるをテーマにしているのですが今のままでは難しいと感じているからです。<br />
+後は、今Reactを学習しているのでフロント部分をReactで作り直したいと考えています。今回はほぼ自分でCSSを書いて作成したので、material-uiやsemantic-uiを使ってもっとリッチなUIにできると考えています。<br />
+非同期処理もjQueryで実装しているのでそこもReactで実装したいと思っています。
 
 ## DB設計
 
@@ -191,6 +194,8 @@ VSCode
 | describe   | text       |                    |
 | place      | string     |                    |
 | user       | references | foreign_key: true  |
+| latitude   | float      |                    |
+| longitude  | float      |                    |
 
 ### Association
 
