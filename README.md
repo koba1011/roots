@@ -35,6 +35,8 @@
 ![be84753a89467fd21be18958b3cdb787](https://user-images.githubusercontent.com/72078024/110499544-b1255700-813b-11eb-95a1-94c567b58d7c.gif)
 
 
+
+
 <h3>新規投稿画面</h3>
 
 ![e63504f7679799eb9322b37a5c2637d7](https://user-images.githubusercontent.com/72078024/110125581-cc742780-7e06-11eb-840d-1d813d53cdc4.gif)
@@ -46,9 +48,12 @@
 ここの選択は必須となっており、どちらも空欄の場合は投稿することができません。また2つとも選択した場合も投稿できないようにしてます。<br />
 <img src="https://i.gyazo.com/59384e6d66f00a1f40bc8c1757f56caf.png" />
 
+
 後はタイトルも必須となっておりますが、その他の情報は無くても投稿できます。<br />
 場所をここで入力することで、投稿詳細画面にてその場所をGoogleマップで表示することが可能です。<br />
 オススメで入力されたURLは、詳細画面でリンクとして表示されるようになっています。
+
+
 
 
 <h3>投稿詳細表示画面</h3>
@@ -67,7 +72,10 @@
 
 
 Youtube動画を共有した場合はこのように表示されます。<br />
+
 <img src="https://i.gyazo.com/3c4a20a2f335d13e6a70dedb299e43b1.jpg" />
+
+
 
 
 
@@ -81,6 +89,9 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 検索結果がない場合は、以下のように表示されます。
 
 <image src="https://i.gyazo.com/ed05dfc62b2fdd49158f6ec11085face.png" />
+
+
+
 
 
 
@@ -104,11 +115,15 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 <image src="https://i.gyazo.com/d755c3d7fabcd3a2e2c278387cc0dc46.png" />
 
 
+
+
+
 <h3>ユーザー情報編集画面</h3>
 
 ![86d478b3f5b45872fb7991246b71bdd8](https://user-images.githubusercontent.com/72078024/110508251-2ac14300-8144-11eb-9b82-ca55f6cd0742.gif)
 
 ここでユーザーは、各情報を編集することができます。
+
 
 
 
