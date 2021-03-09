@@ -104,11 +104,22 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 <image src="https://i.gyazo.com/d755c3d7fabcd3a2e2c278387cc0dc46.png" />
 
 
+<h3>ユーザー情報編集画面</h3>
+
+![86d478b3f5b45872fb7991246b71bdd8](https://user-images.githubusercontent.com/72078024/110508251-2ac14300-8144-11eb-9b82-ca55f6cd0742.gif)
+
+ここでユーザーは、各情報を編集することができます。
+
+
 
 
 <h3>お気に入り投稿一覧画面</h3>
 
 ![365cfeae8f1d71f52613381bc29240f4](https://user-images.githubusercontent.com/72078024/110126925-4eb11b80-7e08-11eb-96d2-1e4d37377d8e.gif)
+
+投稿詳細画面でお気に入りした一覧を表示しています。<br />
+お気に入り件数と、各投稿の画像、タイトル、ユーザー名が表示されます。
+
   
 ## 工夫したポイント
 
