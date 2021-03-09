@@ -33,10 +33,10 @@
 投稿がない場合は以下のように表示されます。
 
 ![be84753a89467fd21be18958b3cdb787](https://user-images.githubusercontent.com/72078024/110499544-b1255700-813b-11eb-95a1-94c567b58d7c.gif)
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 <h3>新規投稿画面</h3>
 
 ![e63504f7679799eb9322b37a5c2637d7](https://user-images.githubusercontent.com/72078024/110125581-cc742780-7e06-11eb-840d-1d813d53cdc4.gif)
@@ -52,10 +52,10 @@
 後はタイトルも必須となっておりますが、その他の情報は無くても投稿できます。<br />
 場所をここで入力することで、投稿詳細画面にてその場所をGoogleマップで表示することが可能です。<br />
 オススメで入力されたURLは、詳細画面でリンクとして表示されるようになっています。
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 <h3>投稿詳細表示画面</h3>
 
 ![Roots](https://user-images.githubusercontent.com/72078024/110114341-cfb3e700-7df7-11eb-9d6d-394c72a80db6.gif)
@@ -74,11 +74,10 @@
 Youtube動画を共有した場合はこのように表示されます。<br />
 
 <img src="https://i.gyazo.com/3c4a20a2f335d13e6a70dedb299e43b1.jpg" />
-
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 <h3>投稿検索画面</h3>
 
 ![eb62cf1ed6753135c24f86447fefaa3a](https://user-images.githubusercontent.com/72078024/110126102-6a67f200-7e07-11eb-8510-d57955b2e6db.gif)
@@ -89,12 +88,10 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 検索結果がない場合は、以下のように表示されます。
 
 <image src="https://i.gyazo.com/ed05dfc62b2fdd49158f6ec11085face.png" />
-
-
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 <h3>ユーザー詳細画面</h3>
 
 ![f5f2fd4cfa2548a2e7bf8d14deeea11a](https://user-images.githubusercontent.com/72078024/110507279-35c7a380-8143-11eb-8789-e467faccc751.gif)
@@ -113,21 +110,19 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 投稿がない場合はこのように表示されます。<br />
 
 <image src="https://i.gyazo.com/d755c3d7fabcd3a2e2c278387cc0dc46.png" />
-
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 <h3>ユーザー情報編集画面</h3>
 
 ![86d478b3f5b45872fb7991246b71bdd8](https://user-images.githubusercontent.com/72078024/110508251-2ac14300-8144-11eb-9b82-ca55f6cd0742.gif)
 
 ここでユーザーは、各情報を編集することができます。
-
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 <h3>お気に入り投稿一覧画面</h3>
 
 ![365cfeae8f1d71f52613381bc29240f4](https://user-images.githubusercontent.com/72078024/110126925-4eb11b80-7e08-11eb-96d2-1e4d37377d8e.gif)
