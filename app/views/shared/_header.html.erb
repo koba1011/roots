@@ -8,25 +8,32 @@
     <% end %>
     <div class='nav'>
       <ul class='lists-right'>
-        <li><%= link_to image_tag("post-new.png", class: "post-new-icon"), new_post_path %></li>
-        <div class="dropdown">
-          <div class="header-user-icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%# プロフィール画像の登録状態で表示を変更 %>
-            <% if current_user.image.present? %>
-              <%= image_tag current_user.image, class: "user-icon" %>
-            <% else %>
-              <%= image_tag "profile_icon.png", class: "user-icon" %>
-            <% end %>
-            <%# /プロフィール画像の登録状態で表示を変更 %>
+        <% if user_signed_in? %>
+          <li><%= link_to image_tag("post-new.png", class: "post-new-icon"), new_post_path %></li>
+          <div class="dropdown">
+            <div class="header-user-icon" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%# プロフィール画像の登録状態で表示を変更 %>
+              <% if current_user.image.present? %>
+                <%= image_tag current_user.image, class: "user-icon" %>
+              <% else %>
+                <%= image_tag "profile_icon.png", class: "user-icon" %>
+              <% end %>
+              <%# /プロフィール画像の登録状態で表示を変更 %>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%= link_to "プロフィール", user_path(current_user.id), class: "dropdown-item" %>
+              <%= link_to "プロフィール編集", edit_user_path(current_user.id), class: "dropdown-item"%>
+              <%= link_to "お気に入り一覧", favorites_posts_path(current_user.id), class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
           </div>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <%= link_to "プロフィール", user_path(current_user.id), class: "dropdown-item" %>
-            <%= link_to "プロフィール編集", edit_user_path(current_user.id), class: "dropdown-item"%>
-            <%= link_to "お気に入り一覧", favorites_posts_path(current_user.id), class: "dropdown-item" %>
-            <div class="dropdown-divider"></div>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <% else %>
+          <div class="login-signup">
+            <%= link_to "ログイン", new_user_session_path, class: "btn btn-outline-dark btn-sm" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "btn btn-outline-primary btn-sm" %>
           </div>
-        </div>
+        <% end %>
       </ul>
     </div>
   </div>

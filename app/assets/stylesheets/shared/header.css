@@ -69,3 +69,8 @@
   border-radius: 50%;
   background-color: black;
 }
+
+.login-signup {
+  margin-top: 10px;
+  margin-right: -5px;
+}

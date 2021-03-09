@@ -1,4 +1,4 @@
-<% if user_signed_in? %>
+
   <%= render "shared/header" %>
 
   <div class="main">
@@ -41,12 +41,5 @@
     <%# 投稿がないときの表示 %>
   </div>
 
-
-
-<%# ログインしていないユーザーの表示を変更 %>
-<% else %>
-  <%= render "shared/second-index" %>
-<% end %>
-<%# /ログインしていないユーザーの表示を変更 %>
 
 
