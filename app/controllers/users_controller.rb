@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:show, :following, :followers]
   before_action :set_user, only: [:show, :edit, :update, :following, :followers]
   
   def show
