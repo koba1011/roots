@@ -23,7 +23,7 @@
 
 <h3>トップページ（投稿一覧画面）</h3>
 
-![top](https://user-images.githubusercontent.com/72078024/110124916-0d1f7100-7e06-11eb-9f08-910647d41996.gif)
+![272fa84d85901f87a7687c33926b5fb0](https://user-images.githubusercontent.com/72078024/110619771-8b4f8f00-81db-11eb-9c18-3913cead4fd2.gif)
 
 ログイン状態に関わらず、サイトにアクセスするとこの画面に遷移します。
 投稿がある場合は、全ユーザーに一覧で表示されます。
@@ -32,7 +32,7 @@
 
 投稿がない場合は以下のように表示されます。
 
-![be84753a89467fd21be18958b3cdb787](https://user-images.githubusercontent.com/72078024/110499544-b1255700-813b-11eb-95a1-94c567b58d7c.gif)
+![592089259c952ba032869eb459419932](https://user-images.githubusercontent.com/72078024/110619285-f8165980-81da-11eb-826d-d56ed7e62b1f.gif)
 <br />
 <br />
 <br />
@@ -94,7 +94,7 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 <br />
 <h3>ユーザー詳細画面</h3>
 
-![f5f2fd4cfa2548a2e7bf8d14deeea11a](https://user-images.githubusercontent.com/72078024/110507279-35c7a380-8143-11eb-8789-e467faccc751.gif)
+![edc29416a063c7c2db3c28f56bf81d11](https://user-images.githubusercontent.com/72078024/110626492-1f255900-81e4-11eb-9e02-a9b4d7c7c86d.gif)
 
 
 ここで表示されるのは以下の通りです。<br />
@@ -125,7 +125,7 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 <br />
 <h3>お気に入り投稿一覧画面</h3>
 
-![365cfeae8f1d71f52613381bc29240f4](https://user-images.githubusercontent.com/72078024/110126925-4eb11b80-7e08-11eb-96d2-1e4d37377d8e.gif)
+![bce7ff376e0ac388b5a954d0c1690cdc](https://user-images.githubusercontent.com/72078024/110630389-a1178100-81e8-11eb-8510-641ff73be2b3.gif)
 
 投稿詳細画面でお気に入りした一覧を表示しています。<br />
 お気に入り件数と、各投稿の画像、タイトル、ユーザー名が表示されます。
