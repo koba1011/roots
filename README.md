@@ -39,14 +39,14 @@
 <br />
 <h3>新規投稿画面</h3>
 
-![e63504f7679799eb9322b37a5c2637d7](https://user-images.githubusercontent.com/72078024/110125581-cc742780-7e06-11eb-840d-1d813d53cdc4.gif)
+![c68d5696c6cf74db38e92f80cf053479](https://user-images.githubusercontent.com/72078024/110631335-c22ca180-81e9-11eb-97d3-f77f51c03e6f.gif)
 
 ここではまず自分の動画を投稿するか、Youtubeの動画を共有するかを選ぶことができます。<br />
 ・自分の動画の場合はファイルをアップロードします。<br />
 ・Youtube動画の共有の場合は、共有したい動画のURLを入力します。<br />
 
 ここの選択は必須となっており、どちらも空欄の場合は投稿することができません。また2つとも選択した場合も投稿できないようにしてます。<br />
-<img src="https://i.gyazo.com/59384e6d66f00a1f40bc8c1757f56caf.png" />
+<img src="https://i.gyazo.com/f93dd156c60bef11128f7f0b8e71d6d8.png" />
 
 
 後はタイトルも必須となっておりますが、その他の情報は無くても投稿できます。<br />
