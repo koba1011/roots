@@ -4,26 +4,28 @@
   <div class="main">
     <% if @posts.present? %>
       <div class="post-contents">
-      
+
         <%# 投稿の中からランダムで５件表示する機能 %>
-        <div class="post-random">
-          <div class="random-contents">
-            <% @random.each do |random| %>
-              <div class="random-videos">
-                <% if random.video.present? %>
-                  <%= link_to (video_tag rails_blob_path(random.video), class: "random-video1"),post_path(random.id) %>
-                <% elsif random.youtube_url.present? %>
-                  <%= link_to  post_path(random.id) do %>
-                    <img class= "random-video2" src="http://img.youtube.com/vi/<%= random.youtube_url %>/maxresdefault.jpg" >
+        <% if @posts.count >= 5 %>
+          <div class="post-random">
+            <div class="random-contents">
+              <% @random.each do |random| %>
+                <div class="random-videos">
+                  <% if random.video.present? %>
+                    <%= link_to (video_tag rails_blob_path(random.video), class: "random-video1"),post_path(random.id) %>
+                  <% elsif random.youtube_url.present? %>
+                    <%= link_to  post_path(random.id) do %>
+                      <img class= "random-video2" src="http://img.youtube.com/vi/<%= random.youtube_url %>/maxresdefault.jpg" >
+                    <% end %>
                   <% end %>
-                <% end %>
-                <div class="random-caption">
-                  <%= link_to random.caption, post_path(random.id), class: "random-link" %>
+                  <div class="random-caption">
+                    <%= link_to random.caption, post_path(random.id), class: "random-link" %>
+                  </div>
                 </div>
-              </div>
-            <% end %>
+              <% end %>
+            </div>
           </div>
-        </div>
+        <% end %>
         <%# /投稿の中からランダムで5件表示する機能 %>
 
         <% @posts.each do |post| %>
