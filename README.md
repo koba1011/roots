@@ -1,4 +1,4 @@
-![Roots](https://user-images.githubusercontent.com/72078024/110114341-cfb3e700-7df7-11eb-9d6d-394c72a80db6.gif)
+![f5ca533ddabbe0b91bc627e80cc583bd](https://user-images.githubusercontent.com/72078024/110615909-46c1f480-81d7-11eb-8213-46bf5a80ed40.gif)
 
 <h2 align="center">旅行専門動画投稿サイトRoots</h2>
 
