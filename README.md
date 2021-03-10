@@ -23,7 +23,7 @@
 
 <h3>トップページ（投稿一覧画面）</h3>
 
-![top](https://user-images.githubusercontent.com/72078024/110124916-0d1f7100-7e06-11eb-9f08-910647d41996.gif)
+![272fa84d85901f87a7687c33926b5fb0](https://user-images.githubusercontent.com/72078024/110619771-8b4f8f00-81db-11eb-9c18-3913cead4fd2.gif)
 
 ログイン状態に関わらず、サイトにアクセスするとこの画面に遷移します。
 投稿がある場合は、全ユーザーに一覧で表示されます。
@@ -32,21 +32,21 @@
 
 投稿がない場合は以下のように表示されます。
 
-![be84753a89467fd21be18958b3cdb787](https://user-images.githubusercontent.com/72078024/110499544-b1255700-813b-11eb-95a1-94c567b58d7c.gif)
+![592089259c952ba032869eb459419932](https://user-images.githubusercontent.com/72078024/110619285-f8165980-81da-11eb-826d-d56ed7e62b1f.gif)
 <br />
 <br />
 <br />
 <br />
 <h3>新規投稿画面</h3>
 
-![e63504f7679799eb9322b37a5c2637d7](https://user-images.githubusercontent.com/72078024/110125581-cc742780-7e06-11eb-840d-1d813d53cdc4.gif)
+![c68d5696c6cf74db38e92f80cf053479](https://user-images.githubusercontent.com/72078024/110631335-c22ca180-81e9-11eb-97d3-f77f51c03e6f.gif)
 
 ここではまず自分の動画を投稿するか、Youtubeの動画を共有するかを選ぶことができます。<br />
 ・自分の動画の場合はファイルをアップロードします。<br />
 ・Youtube動画の共有の場合は、共有したい動画のURLを入力します。<br />
 
 ここの選択は必須となっており、どちらも空欄の場合は投稿することができません。また2つとも選択した場合も投稿できないようにしてます。<br />
-<img src="https://i.gyazo.com/59384e6d66f00a1f40bc8c1757f56caf.png" />
+<img src="https://i.gyazo.com/f93dd156c60bef11128f7f0b8e71d6d8.png" />
 
 
 後はタイトルも必須となっておりますが、その他の情報は無くても投稿できます。<br />
@@ -58,7 +58,7 @@
 <br />
 <h3>投稿詳細表示画面</h3>
 
-![Roots](https://user-images.githubusercontent.com/72078024/110114341-cfb3e700-7df7-11eb-9d6d-394c72a80db6.gif)
+![607b1648de17b42d94466f18fd344abd](https://user-images.githubusercontent.com/72078024/110631981-73333c00-81ea-11eb-9b6a-c57f4a07033a.gif)
 
 ここでの主な機能は以下の通りです。<br />
 ・動画再生機能<br />
@@ -73,28 +73,28 @@
 
 Youtube動画を共有した場合はこのように表示されます。<br />
 
-<img src="https://i.gyazo.com/3c4a20a2f335d13e6a70dedb299e43b1.jpg" />
+<img src="https://i.gyazo.com/310ddc47e9e44ea57cc8f8895dfc03f3.jpg" />
 <br />
 <br />
 <br />
 <br />
 <h3>投稿検索画面</h3>
 
-![eb62cf1ed6753135c24f86447fefaa3a](https://user-images.githubusercontent.com/72078024/110126102-6a67f200-7e07-11eb-8510-d57955b2e6db.gif)
+![d6a80d5808b13415d81569faf46dfc89](https://user-images.githubusercontent.com/72078024/110632288-c9a07a80-81ea-11eb-9f09-d331364ab093.gif)
 
 ログイン状態に関わらず投稿の検索をすることができます。タイトルと場所をキーワードにかかるようにしています。<br />
 検索結果の画面では、入力したキーワードとヒットした件数、ヒットした投稿の画像をランダムで検索キーワードの横に表示されるようにしています。
 
 検索結果がない場合は、以下のように表示されます。
 
-<image src="https://i.gyazo.com/ed05dfc62b2fdd49158f6ec11085face.png" />
+<image src="https://i.gyazo.com/ee962d1b3e76b707cc56577d3df67714.png" />
 <br />
 <br />
 <br />
 <br />
 <h3>ユーザー詳細画面</h3>
 
-![f5f2fd4cfa2548a2e7bf8d14deeea11a](https://user-images.githubusercontent.com/72078024/110507279-35c7a380-8143-11eb-8789-e467faccc751.gif)
+![edc29416a063c7c2db3c28f56bf81d11](https://user-images.githubusercontent.com/72078024/110626492-1f255900-81e4-11eb-9e02-a9b4d7c7c86d.gif)
 
 
 ここで表示されるのは以下の通りです。<br />
@@ -109,14 +109,14 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 
 投稿がない場合はこのように表示されます。<br />
 
-<image src="https://i.gyazo.com/d755c3d7fabcd3a2e2c278387cc0dc46.png" />
+<image src="https://i.gyazo.com/ab2ff5b2aeece944735c8dca5c969b86.png" />
 <br />
 <br />
 <br />
 <br />
 <h3>ユーザー情報編集画面</h3>
 
-![86d478b3f5b45872fb7991246b71bdd8](https://user-images.githubusercontent.com/72078024/110508251-2ac14300-8144-11eb-9b82-ca55f6cd0742.gif)
+![a7aa2d28c38b3da38eb3b1a0737a8a54](https://user-images.githubusercontent.com/72078024/110632978-927e9900-81eb-11eb-9b09-f0f9fe995e13.gif)
 
 ここでユーザーは、各情報を編集することができます。
 <br />
@@ -125,7 +125,7 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 <br />
 <h3>お気に入り投稿一覧画面</h3>
 
-![365cfeae8f1d71f52613381bc29240f4](https://user-images.githubusercontent.com/72078024/110126925-4eb11b80-7e08-11eb-96d2-1e4d37377d8e.gif)
+![bce7ff376e0ac388b5a954d0c1690cdc](https://user-images.githubusercontent.com/72078024/110630389-a1178100-81e8-11eb-8510-641ff73be2b3.gif)
 
 投稿詳細画面でお気に入りした一覧を表示しています。<br />
 お気に入り件数と、各投稿の画像、タイトル、ユーザー名が表示されます。
