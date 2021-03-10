@@ -7,6 +7,60 @@
   margin: 110px auto 50px;
 }
 
+/* 投稿をランダムで表時する機能 */
+
+.post-random {
+  background-color: #fff;
+  border: 1px solid rgba(216, 216, 216, 0.753);
+  border-radius: 2px;
+  margin-bottom: 30px;
+  height: 16vh;
+}
+
+.random-contents {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.random-videos {
+  text-align: center;
+}
+
+.random-video1 {
+  margin-bottom: -5px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.random-video2 {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.random-caption {
+  margin-top: 3px;
+}
+
+.random-link {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+.random-link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* 投稿がないときの表示 */
+
 .post-content {
   background-color: #fff;
   margin-bottom: 10vh;
@@ -51,6 +105,7 @@
   text-decoration: none;
   color: black;
 }
+
 .post-index-time {
   font-size: 12px;
   margin-top: 5px;

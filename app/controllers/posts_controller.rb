@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order("created_at DESC")
+    @random = Post.all.order("RAND()").limit(5)
   end
 
   def new

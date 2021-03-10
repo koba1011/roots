@@ -6,6 +6,7 @@
     <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
       <%= form.text_field :keyword, placeholder: "検索", class: "input-box" %>
     <% end %>
+
     <div class='nav'>
       <div class='lists-right'>
         <% if user_signed_in? %>
@@ -23,6 +24,7 @@
                 <% end %>
                 <%# /プロフィール画像の登録状態で表示を変更 %>
               </div>
+              
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <%= link_to "プロフィール", user_path(current_user.id), class: "dropdown-item" %>
                 <%= link_to "プロフィール編集", edit_user_path(current_user.id), class: "dropdown-item"%>
@@ -32,11 +34,13 @@
               </div>
             </div>
           <div>
-        <% else %>
+        <% else %> 
+          <%# 未ログイン時の表示 %>
           <div class="login-signup">
             <%= link_to "ログイン", new_user_session_path, class: "header-login" %>
             <%= link_to "新規登録", new_user_registration_path, class: "header-signup" %>
           </div>
+          <%# / 未ログイン時の表示 %>
         <% end %>
       </div>
     </div>

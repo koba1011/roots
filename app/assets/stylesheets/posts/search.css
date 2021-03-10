@@ -17,13 +17,6 @@
   height: 168px;
 }
 
-.search-show-icon {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: black;
-}
-
 .search-show-icon{
   width: 100%;
   height: 100%;
@@ -83,3 +76,5 @@
   font-weight: normal;
   margin: auto;
 }
+
+/*検索結果がないときの表示*/

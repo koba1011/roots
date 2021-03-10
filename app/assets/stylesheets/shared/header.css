@@ -95,6 +95,8 @@
   background-color: black;
 }
 
+/*ログインしていない時の表示*/
+
 .login-signup {
   margin: 0 -25px 0 -67px ;
   font-size: 14px;
@@ -120,3 +122,5 @@
   color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
 }
+
+/*ログインしていない時の表示*/
