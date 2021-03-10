@@ -18,7 +18,7 @@
         </div>
       <% end %>
       <%# 投稿がない時の表示 %>
-      <% if current_user.posts.blank? && @user == current_user  %>
+      <% if  current_user == @user && current_user.posts.blank?   %>
         <div class="user-post-blank">
           <video class="user-video-show" src="/videos/video (1).mp4" loop autoplay muted type="video/mp4"></video>
           <h2 class="user-show-text">撮影した動画やオススメの動画を共有しよう。</h2>
