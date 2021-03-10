@@ -58,7 +58,7 @@
 <br />
 <h3>投稿詳細表示画面</h3>
 
-![Roots](https://user-images.githubusercontent.com/72078024/110114341-cfb3e700-7df7-11eb-9d6d-394c72a80db6.gif)
+![607b1648de17b42d94466f18fd344abd](https://user-images.githubusercontent.com/72078024/110631981-73333c00-81ea-11eb-9b6a-c57f4a07033a.gif)
 
 ここでの主な機能は以下の通りです。<br />
 ・動画再生機能<br />
@@ -73,21 +73,21 @@
 
 Youtube動画を共有した場合はこのように表示されます。<br />
 
-<img src="https://i.gyazo.com/3c4a20a2f335d13e6a70dedb299e43b1.jpg" />
+<img src="https://i.gyazo.com/310ddc47e9e44ea57cc8f8895dfc03f3.jpg" />
 <br />
 <br />
 <br />
 <br />
 <h3>投稿検索画面</h3>
 
-![eb62cf1ed6753135c24f86447fefaa3a](https://user-images.githubusercontent.com/72078024/110126102-6a67f200-7e07-11eb-8510-d57955b2e6db.gif)
+![d6a80d5808b13415d81569faf46dfc89](https://user-images.githubusercontent.com/72078024/110632288-c9a07a80-81ea-11eb-9f09-d331364ab093.gif)
 
 ログイン状態に関わらず投稿の検索をすることができます。タイトルと場所をキーワードにかかるようにしています。<br />
 検索結果の画面では、入力したキーワードとヒットした件数、ヒットした投稿の画像をランダムで検索キーワードの横に表示されるようにしています。
 
 検索結果がない場合は、以下のように表示されます。
 
-<image src="https://i.gyazo.com/ed05dfc62b2fdd49158f6ec11085face.png" />
+<image src="https://i.gyazo.com/ee962d1b3e76b707cc56577d3df67714.png" />
 <br />
 <br />
 <br />
@@ -109,14 +109,14 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 
 投稿がない場合はこのように表示されます。<br />
 
-<image src="https://i.gyazo.com/d755c3d7fabcd3a2e2c278387cc0dc46.png" />
+<image src="https://i.gyazo.com/ab2ff5b2aeece944735c8dca5c969b86.png" />
 <br />
 <br />
 <br />
 <br />
 <h3>ユーザー情報編集画面</h3>
 
-![86d478b3f5b45872fb7991246b71bdd8](https://user-images.githubusercontent.com/72078024/110508251-2ac14300-8144-11eb-9b82-ca55f6cd0742.gif)
+![a7aa2d28c38b3da38eb3b1a0737a8a54](https://user-images.githubusercontent.com/72078024/110632978-927e9900-81eb-11eb-9b09-f0f9fe995e13.gif)
 
 ここでユーザーは、各情報を編集することができます。
 <br />
