@@ -1,6 +1,6 @@
 ![f5ca533ddabbe0b91bc627e80cc583bd](https://user-images.githubusercontent.com/72078024/110615909-46c1f480-81d7-11eb-8213-46bf5a80ed40.gif)
 
-<h2 align="center">旅行専門動画投稿サイトRoots</h2>
+<h2 align="center">いえ旅動画投稿サイトRoots</h2>
 
 <p align="center">
   <a href="https://rubyonrails.org/"><img src="https://user-images.githubusercontent.com/72078024/110115307-3be31a80-7df9-11eb-8df1-5e9efc4b0046.jpeg" width="80px;" /></a>
@@ -18,6 +18,13 @@
 
 - Eメール : **s@s.com**
 - パスワード : sasasa1
+
+## 💡 制作背景(意図)
+　
+## 💡 制作背景(意図
+
+家にいる時間が多くなるこのご時世に、
+　
 
 ## 📦 DEMO
 
