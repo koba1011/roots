@@ -116,7 +116,7 @@ Youtube動画を共有した場合はこのように表示されます。<br />
 
 投稿がない場合はこのように表示されます。<br />
 
-<image src="https://i.gyazo.com/ab2ff5b2aeece944735c8dca5c969b86.png" />
+<image src="https://i.gyazo.com/fdf4e45847124523d97125b3ca687461.png" />
 <br />
 <br />
 <br />
